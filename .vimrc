@@ -50,11 +50,15 @@ set backspace=indent,eol,start
 " Bubble single line up/down
 nmap <C-Up> [e
 nmap <C-Down> ]e
+
 " Bubble multiple lines up/down
+" TODO: Doesn't work...
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+map :W :w
 map :Q :q
+map :Wq :wq
 
 "Directories for swp files
 set backupdir=~/.vim/backup
@@ -69,4 +73,11 @@ map <silent> <C-F2> :if &guioptions =~# 'T' <Bar> set guioptions-=T  <Bar> set g
 " initially remove toolbar and menu
 set guioptions-=T
 set guioptions-=m
+
+" Alt-Up/Down: Don't skip wrapped lines when navigating
+" TODO: Alt key doesn't work on my Linux console...gvim works 
+map <A-DOWN> gj
+map <A-UP> gk
+imap <A-DOWN> <Esc>gji
+imap <A-UP> gki
 
