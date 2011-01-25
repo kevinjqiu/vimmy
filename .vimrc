@@ -4,6 +4,9 @@ set ruler
 syntax on
 filetype plugin indent on
 
+" Ctrl+N twice to toggle show line number
+nmap <C-N><C-N> :set invnumber<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Cursor line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -40,8 +43,10 @@ set tabstop=4
 set smartindent
 set shiftwidth=4
 set softtabstop=4
-set expandtab " Not for PHP at work
+set expandtab
 set autoindent
+
+au BufRead *.php set noexpandtab " Don't expand tab for PHP
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Searching
@@ -119,8 +124,15 @@ imap <A-UP> gki
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map :tn :tabnew<CR>
 map :tt :tabn<CR>
-" Ctrl+N twice to toggle show line number
-nmap <C-N><C-N> :set invnumber<CR>
+map t1 1gt
+map t2 2gt
+map t3 3gt
+map t4 4gt
+map t5 5gt
+map t6 6gt
+map t7 7gt
+map t8 8gt
+map t9 9gt
 
 " the shift key is a bit sticky on Mac...
 map :W :w
@@ -134,4 +146,5 @@ map :Wq :wq
 source $HOME/.vim/conf/FuzzyFinder.vim
 source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/VimClojure.vim
+source $HOME/.vim/conf/ConqueTerm.vim
 
