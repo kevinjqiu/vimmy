@@ -29,9 +29,10 @@ set background=dark
 if has("gui_running")
 	set guioptions-=T
 	set t_Co=256
-	colorscheme peaksea
+    colorscheme railscasts
 else
-	colorscheme wombat
+	" colorscheme wombat
+	colorscheme peaksea
 	" colorscheme zellner
 endif
 
