@@ -1,5 +1,4 @@
 set nocompatible
-
 set ruler
 set scrolloff=3 " keep cusion space when scrolling up/down
 set showcmd
@@ -36,15 +35,16 @@ set ff=unix
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set gfn=Monaco:h16
 " set gfn=Andale\ Mono:h16
+" set gfn=Anonymous\ Pro:h16
 set background=dark
 if has("gui_running")
 	set guioptions-=T
 	set t_Co=256
     colorscheme railscasts
 else
-	" colorscheme wombat
-	" colorscheme zellner
-	colorscheme peaksea 
+    " colorscheme wombat
+    " colorscheme zellner
+    colorscheme peaksea 
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
