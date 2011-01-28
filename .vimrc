@@ -40,7 +40,10 @@ set background=dark
 if has("gui_running")
 	set guioptions-=T
 	set t_Co=256
-    colorscheme railscasts
+    " colorscheme railscasts
+    " colorscheme mustang
+    colorscheme molokai
+    " colorscheme clouds
 else
     " colorscheme wombat
     " colorscheme zellner
