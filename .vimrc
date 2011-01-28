@@ -1,6 +1,17 @@
 set nocompatible
 
 set ruler
+set scrolloff=3 " keep cusion space when scrolling up/down
+set showcmd
+set ttyfast
+"set relativenumber  " only available in 7.3
+set showmatch " briefly jump to the matching bracket
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" leader
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = ","
+
 syntax on
 filetype plugin indent on
 
@@ -57,6 +68,12 @@ set incsearch
 set ignorecase
 set smartcase
 
+nnoremap / /\v
+vnoremap / /\v
+nnoremap <leader><space> :noh<cr>
+" use tab to find matching pairs
+nnoremap <tab> % 
+vnoremap <tab> %
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tab completion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -123,6 +140,7 @@ imap <A-UP> gki
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keymaps 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap jj <ESC>
 map :tn :tabnew<CR>
 map :tt :tabn<CR>
 map t1 1gt

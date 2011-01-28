@@ -1,5 +1,15 @@
+INSTALLED:
 conque_term 2.0
 NERDTree 4.1.0
 FufCoverage 1984
 vimclojure 2.2.0
 tcomment 2010-12-07
+TRY:
+NERDCommenter
+Ack
+Snipmate
+Surround
+Slime.vim
+Scratch
+fugitive.vim
+
