@@ -5,11 +5,11 @@ FufCoverage 1984
 vimclojure 2.2.0
 tcomment 2010-12-07
 NERDCommenter 2.3.0
+Slime.vim
+fugitive.vim
 TRY:
 Ack
 Snipmate
 Surround
-Slime.vim
 Scratch
-fugitive.vim
 
