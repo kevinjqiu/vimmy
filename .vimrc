@@ -32,8 +32,8 @@ if has("gui_running")
     colorscheme railscasts
 else
 	" colorscheme wombat
-	colorscheme peaksea
 	" colorscheme zellner
+	colorscheme peaksea 
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
