@@ -170,4 +170,5 @@ source $HOME/.vim/conf/FuzzyFinder.vim
 source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/VimClojure.vim
 source $HOME/.vim/conf/ConqueTerm.vim
+source $HOME/.vim/conf/tcomment.vim
 
