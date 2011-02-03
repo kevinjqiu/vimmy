@@ -33,10 +33,10 @@ set ff=unix
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colours and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set gfn=Monaco:h16
+set gfn=Monaco:h16
 " set gfn=Andale\ Mono:h16
 " set gfn=Anonymous\ Pro:h16
-set gfn=Menlo:h16
+" set gfn=Menlo:h16
 set background=dark
 if has("gui_running")
 	set guioptions-=T
