@@ -3,7 +3,7 @@ set ruler
 set scrolloff=3 " keep cusion space when scrolling up/down
 set showcmd
 set ttyfast
-"set relativenumber  " only available in 7.3
+set relativenumber  " only available in 7.3
 set showmatch " briefly jump to the matching bracket
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
