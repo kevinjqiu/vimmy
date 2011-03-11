@@ -33,7 +33,7 @@ set ff=unix
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colours and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set gfn=Monaco:h16
+set gfn=Monaco\ 12
 " set gfn=Andale\ Mono:h16
 " set gfn=Anonymous\ Pro:h16
 " set gfn=Menlo:h16
@@ -63,6 +63,7 @@ set expandtab
 set autoindent
 
 au BufRead *.php set noexpandtab " Don't expand tab for PHP
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Searching
