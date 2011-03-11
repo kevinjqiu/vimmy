@@ -7,16 +7,6 @@ set relativenumber  " only available in 7.3
 set showmatch " briefly jump to the matching bracket
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle setup 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/vundle
-call vundle#rc()
-
-Bundle "L9"
-Bundle "FuzzyFinder"
-Bundle "ack.vim"
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " leader
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
@@ -177,6 +167,7 @@ map :Wq :wq
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source $HOME/.vim/conf/vundle.vim
 source $HOME/.vim/conf/FuzzyFinder.vim
 source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/VimClojure.vim
