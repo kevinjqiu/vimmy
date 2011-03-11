@@ -36,7 +36,11 @@ set ff=unix
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colours and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set gfn=Monaco:h16
+if system("uname") =~ 'Darwin'
+    set gfn=Monaco:h12
+else
+    set gfn=Monaco\ 12
+endif
 " set gfn=Andale\ Mono:h16
 " set gfn=Anonymous\ Pro:h16
 " set gfn=Menlo:h16
