@@ -7,6 +7,16 @@ set relativenumber  " only available in 7.3
 set showmatch " briefly jump to the matching bracket
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle setup 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.vim/vundle
+call vundle#rc()
+
+Bundle "L9"
+Bundle "FuzzyFinder"
+Bundle "ack.vim"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " leader
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
