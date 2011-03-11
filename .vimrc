@@ -36,7 +36,7 @@ set ff=unix
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colours and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set gfn=Monaco\ 12
+set gfn=Monaco:h16
 " set gfn=Andale\ Mono:h16
 " set gfn=Anonymous\ Pro:h16
 " set gfn=Menlo:h16
