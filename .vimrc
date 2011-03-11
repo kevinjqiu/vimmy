@@ -1,3 +1,6 @@
+" Needs to be sourced first because of pathogen
+source $HOME/.vim/conf/vundle.vim
+
 set nocompatible
 set ruler
 set scrolloff=3 " keep cusion space when scrolling up/down
@@ -167,7 +170,6 @@ map :Wq :wq
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source $HOME/.vim/conf/vundle.vim
 source $HOME/.vim/conf/FuzzyFinder.vim
 source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/VimClojure.vim
