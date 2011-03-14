@@ -1,13 +1,16 @@
-" Needs to be sourced first because of pathogen
+" Vundle needs to be sourced first 
 source $HOME/.vim/conf/vundle.vim
 
 set nocompatible
 set ruler
-set scrolloff=3 " keep cusion space when scrolling up/down
+" keep cusion space when scrolling up/down
+set scrolloff=3 
 set showcmd
 set ttyfast
-set relativenumber  " only available in 7.3
-set showmatch " briefly jump to the matching bracket
+" only available in 7.3
+set relativenumber  
+" briefly jump to the matching bracket
+set showmatch 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " leader
@@ -41,20 +44,13 @@ if system("uname") =~ 'Darwin'
 else
     set gfn=Monaco\ 13
 endif
-" set gfn=Andale\ Mono:h16
-" set gfn=Anonymous\ Pro:h16
-" set gfn=Menlo:h16
+
 set background=dark
 if has("gui_running")
 	set guioptions-=T
 	set t_Co=256
-    " colorscheme railscasts
-    " colorscheme mustang
     colorscheme molokai
-    " colorscheme clouds
 else
-    " colorscheme wombat
-    " colorscheme zellner
     colorscheme peaksea 
 endif
 
@@ -69,7 +65,8 @@ set softtabstop=4
 set expandtab
 set autoindent
 
-au BufRead *.php set noexpandtab " Don't expand tab for PHP
+" Don't expand tab for PHP. XXX: add this to filetype plugin
+au BufRead *.php set noexpandtab 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
