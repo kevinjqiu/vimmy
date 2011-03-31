@@ -40,9 +40,9 @@ set ff=unix
 " Colours and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if system("uname") =~ 'Darwin'
-    set gfn=Monaco:h13
+    set gfn=Monaco:h11
 else
-    set gfn=Monaco\ 13
+    set gfn=Monaco\ 11
 endif
 
 set background=dark
