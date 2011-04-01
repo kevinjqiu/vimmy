@@ -145,6 +145,8 @@ map <A-UP> gk
 imap <A-DOWN> <Esc>gji
 imap <A-UP> gki
 
+" fix typos for me please
+abbreviate slef self
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keymaps 
@@ -167,6 +169,9 @@ map :W :w
 map :Q :q
 map :Wq :wq
 
+" traverse buffers
+map <Leader>, :bn<CR>
+map <Leader>. :bp<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
@@ -177,3 +182,11 @@ source $HOME/.vim/conf/VimClojure.vim
 source $HOME/.vim/conf/ConqueTerm.vim
 source $HOME/.vim/conf/tcomment.vim
 
+source $HOME/src/ropevim/ropevim.vim
+source $HOME/src/vim-slime/plugin/slime.vim
+
+" XXX: need refactoring
+let ropevim_vim_completion=1
+let ropevim_extended_complete=1
+nmap <Leader>gd :RopeGotoDefinition<CR>
+nmap <Leader>gf :RopeFindOccurrences<CR>
