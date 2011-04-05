@@ -40,7 +40,7 @@ set ff=unix
 " Colours and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if system("uname") =~ 'Darwin'
-    set gfn=Monaco:h11
+    set gfn=Monaco:h12
 else
     set gfn=Monaco\ 11
 endif
@@ -181,12 +181,6 @@ source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/VimClojure.vim
 source $HOME/.vim/conf/ConqueTerm.vim
 source $HOME/.vim/conf/tcomment.vim
+source $HOME/.vim/conf/Rope.vim
 
-source $HOME/src/ropevim/ropevim.vim
 source $HOME/src/vim-slime/plugin/slime.vim
-
-" XXX: need refactoring
-let ropevim_vim_completion=1
-let ropevim_extended_complete=1
-nmap <Leader>gd :RopeGotoDefinition<CR>
-nmap <Leader>gf :RopeFindOccurrences<CR>
