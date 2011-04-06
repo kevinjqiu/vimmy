@@ -42,7 +42,7 @@ set ff=unix
 if system("uname") =~ 'Darwin'
     set gfn=Monaco:h12
 else
-    set gfn=Monaco\ 11
+    set gfn=Monaco\ 10
 endif
 
 set background=dark
@@ -164,6 +164,8 @@ map t7 7gt
 map t8 8gt
 map t9 9gt
 
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
 " the shift key is a bit sticky on Mac...
 map :W :w
 map :Q :q
