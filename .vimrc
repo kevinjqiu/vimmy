@@ -140,10 +140,10 @@ set guioptions-=m
 " Alt-Up/Down: Don't skip wrapped lines when navigating
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO: Alt key doesn't work on my Linux console...gvim works 
-map <A-DOWN> gj
-map <A-UP> gk
-imap <A-DOWN> <Esc>gji
-imap <A-UP> gki
+map <A-j> gj
+map <A-k> gk
+imap <A-j> <Esc>gji
+imap <A-k> gki
 
 " fix typos for me please
 abbreviate slef self
