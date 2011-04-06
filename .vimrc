@@ -65,10 +65,6 @@ set softtabstop=4
 set expandtab
 set autoindent
 
-" Don't expand tab for PHP. XXX: add this to filetype plugin
-au BufRead *.php set noexpandtab 
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Searching
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -183,5 +179,3 @@ source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/VimClojure.vim
 source $HOME/.vim/conf/ConqueTerm.vim
 source $HOME/.vim/conf/tcomment.vim
-source $HOME/.vim/conf/Rope.vim
-
