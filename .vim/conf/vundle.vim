@@ -3,6 +3,7 @@ call vundle#rc()
 
 Bundle "L9"
 Bundle "FuzzyFinder"
+Bundle "Command-T"
 Bundle "ack.vim"
 Bundle "https://github.com/scrooloose/nerdtree.git"
 Bundle "tComment"
