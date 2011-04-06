@@ -20,3 +20,5 @@ Bundle "Gist.vim"
 Bundle "Jinja"
 Bundle "https://github.com/vim-scripts/Conque-Shell.git"
 Bundle "https://github.com/flazz/vim-colorschemes.git"
+
+Bundle "https://github.com/jpalardy/vim-slime.git"

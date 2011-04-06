@@ -1,7 +1,7 @@
+set nocompatible
 " Vundle needs to be sourced first 
 source $HOME/.vim/conf/vundle.vim
 
-set nocompatible
 set ruler
 " keep cusion space when scrolling up/down
 set scrolloff=3 
@@ -185,4 +185,3 @@ source $HOME/.vim/conf/ConqueTerm.vim
 source $HOME/.vim/conf/tcomment.vim
 source $HOME/.vim/conf/Rope.vim
 
-source $HOME/src/vim-slime/plugin/slime.vim
