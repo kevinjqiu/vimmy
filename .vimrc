@@ -1,4 +1,6 @@
 set nocompatible
+syntax on
+filetype plugin indent on
 " Vundle needs to be sourced first 
 source $HOME/.vim/conf/vundle.vim
 
@@ -17,8 +19,6 @@ set showmatch
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 
-syntax on
-filetype plugin indent on
 
 " Ctrl+N twice to toggle show line number
 nmap <C-N><C-N> :set invnumber<CR>
