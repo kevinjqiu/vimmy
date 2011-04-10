@@ -1,4 +1,4 @@
-set rtp+=~/.vim/vundle
+set rtp+=$HOME/.vim/vundle
 call vundle#rc()
 
 Bundle "L9"
