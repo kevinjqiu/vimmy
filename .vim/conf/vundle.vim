@@ -1,8 +1,6 @@
 set rtp+=$HOME/.vim/vundle
 call vundle#rc()
 
-Bundle "L9"
-Bundle "FuzzyFinder"
 Bundle "Command-T"
 Bundle "ack.vim"
 Bundle "https://github.com/scrooloose/nerdtree.git"
@@ -21,4 +19,7 @@ Bundle "Jinja"
 Bundle "https://github.com/vim-scripts/Conque-Shell.git"
 Bundle "https://github.com/flazz/vim-colorschemes.git"
 Bundle "Solarized"
-Bundle "https://github.com/jpalardy/vim-slime.git"
+Bundle "https://github.com/kevinjqiu/vim-slime.git"
+Bundle "surround.vim"
+Bundle "ZoomWin"
+Bundle "git://github.com/robgleeson/vim-markdown-preview.git"

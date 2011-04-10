@@ -14,5 +14,3 @@ Build Command-T
 * cd $VIM/bundle/Command-T/ruby/command-t
 * ruby extconf.rb
 * make
-
-
