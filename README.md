@@ -14,3 +14,12 @@ Build Command-T
 * cd $VIM/bundle/Command-T/ruby/command-t
 * ruby extconf.rb
 * make
+
+Included Plugins
+----------------
+Take a look [here](https://github.com/kevinjqiu/vimmy/blob/master/.vim/conf/vundle.vim)
+
+TODO
+----
+* build script
+
