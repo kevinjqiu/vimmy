@@ -146,6 +146,14 @@ imap <A-k> gki
 abbreviate slef self
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Alt-Up/Down: Don't skip wrapped lines when navigating
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if bufwinnr(1)
+    nnoremap + <C-W>+
+    nnoremap - <C-W>-
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keymaps 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap jj <ESC>
@@ -182,3 +190,4 @@ source $HOME/.vim/conf/ConqueTerm.vim
 source $HOME/.vim/conf/tcomment.vim
 source $HOME/.vim/conf/Ack.vim
 source $HOME/.vim/conf/ZoomWin.vim
+source $HOME/.vim/conf/CommandT.vim
