@@ -49,10 +49,9 @@ set background=dark
 if has("gui_running")
 	set guioptions-=T
 	set t_Co=256
-    " colorscheme molokai
-    colorscheme solarized
+    colorscheme up 
 else
-    colorscheme peaksea 
+    colorscheme ir_black 
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -180,7 +179,7 @@ map :Wq :wq
 map <Leader>, :bn<CR>
 map <Leader>. :bp<CR>
 
-nmap <C-S> ggVG
+nmap <C-A> ggVG
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
