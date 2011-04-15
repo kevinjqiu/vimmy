@@ -187,6 +187,10 @@ nmap <C-A> ggVG
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufEnter,BufRead *.py source $HOME/.vim/conf/lang/python.vim
+au BufEnter,BufRead *.rb source $HOME/.vim/conf/lang/ruby.vim
+au BufEnter,BufRead *.php source $HOME/.vim/conf/lang/php.vim
+
 source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/VimClojure.vim
 source $HOME/.vim/conf/ConqueTerm.vim
