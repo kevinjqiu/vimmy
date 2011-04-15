@@ -170,6 +170,10 @@ map t9 9gt
 
 nnoremap <C-h> :tabp<CR>
 nnoremap <C-l> :tabn<CR>
+
+" toggle show whitespace
+nmap <Leader>w :set list!<CR>
+set listchars=tab:▸\ ,eol:¬ 
 " the shift key is a bit sticky on Mac...
 map :W :w
 map :Q :q
