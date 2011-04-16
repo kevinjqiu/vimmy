@@ -36,3 +36,13 @@ endfunction
 
 let pyindent_nested_paren="&sw*2"
 let pyindent_open_paren="&sw*2"
+
+set textwidth=80 
+set tabstop=4
+set shiftwidth=4 
+set softtabstop=4 
+set autoindent
+let python_highlight_all = 1
+" Smart indent
+set smartindent
+set cinwords=if,elif,else,for,while,try,except,finally,def,class

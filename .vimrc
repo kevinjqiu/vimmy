@@ -27,8 +27,6 @@ nmap <C-N><C-N> :set invnumber<CR>
 " Cursor line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set cursorline
-" TODO: find a nice colour for the cursorline
-" highlight CursorLine guibg=Xxx ctermbg=Xxx
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set encoding
@@ -155,9 +153,11 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keymaps 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap <C-Space> <C-x><C-o> 
 inoremap jj <ESC>
 map :tn :tabnew<CR>
 map :tt :tabn<CR>
+map <Leader>T :tabnew<CR>
 map t1 1gt
 map t2 2gt
 map t3 3gt
@@ -184,12 +184,13 @@ map <Leader>, :bn<CR>
 map <Leader>. :bp<CR>
 
 nmap <C-A> ggVG
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufEnter,BufRead *.py source $HOME/.vim/conf/lang/python.vim
-au BufEnter,BufRead *.rb source $HOME/.vim/conf/lang/ruby.vim
-au BufEnter,BufRead *.php source $HOME/.vim/conf/lang/php.vim
+au BufEnter,BufRead,BufNewFile,FileReadPost *.py source $HOME/.vim/conf/lang/python.vim
+au BufEnter,BufRead,BufNewFile,FileReadPost *.rb source $HOME/.vim/conf/lang/ruby.vim
+au BufEnter,BufRead,BufNewFile,FileReadPost *.php source $HOME/.vim/conf/lang/php.vim
 
 source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/VimClojure.vim
