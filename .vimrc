@@ -170,6 +170,10 @@ map t9 9gt
 
 nnoremap <C-h> :tabp<CR>
 nnoremap <C-l> :tabn<CR>
+" Ctrl-j = page down
+nnoremap <C-j> <C-d>
+" Ctrl-k = page up
+nnoremap <C-k> <C-b>
 
 " toggle show whitespace
 nmap <Leader>w :set list!<CR>
@@ -189,7 +193,7 @@ nmap <C-A> ggVG
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufEnter,BufRead,BufNewFile,FileReadPost *.py source $HOME/.vim/conf/lang/python.vim
-au BufEnter,BufRead,BufNewFile,FileReadPost *.rb source $HOME/.vim/conf/lang/ruby.vim
+au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile source $HOME/.vim/conf/lang/ruby.vim
 au BufEnter,BufRead,BufNewFile,FileReadPost *.php source $HOME/.vim/conf/lang/php.vim
 
 source $HOME/.vim/conf/NERDTree.vim
