@@ -174,6 +174,7 @@ nnoremap <C-l> :tabn<CR>
 nnoremap <C-j> <C-d>
 " Ctrl-k = page up
 nnoremap <C-k> <C-b>
+imap <C-Space> <C-x><C-o>
 
 " toggle show whitespace
 nmap <Leader>w :set list!<CR>
