@@ -7,7 +7,6 @@ Bundle "https://github.com/scrooloose/nerdtree.git"
 Bundle "tComment"
 Bundle "https://github.com/tpope/vim-fugitive.git"
 
-Bundle "PySmell"
 Bundle "VimClojure"
 Bundle "https://github.com/vim-ruby/vim-ruby.git"
 Bundle "python.vim"
