@@ -105,16 +105,14 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bubble single line up/down
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-Up> [e
-nmap <C-Down> ]e
-
+" TODO consider using unimpaired
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bubble multiple lines up/down
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO: Doesn't work...
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Directories for swp files
@@ -194,13 +192,10 @@ nmap <C-A> ggVG
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufEnter,BufRead,BufNewFile,FileReadPost *.py source $HOME/.vim/conf/lang/python.vim
-au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile source $HOME/.vim/conf/lang/ruby.vim
 au BufEnter,BufRead,BufNewFile,FileReadPost *.php source $HOME/.vim/conf/lang/php.vim
+au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile source $HOME/.vim/conf/lang/ruby.vim
+au BufEnter,BufRead,BufNewFile,FileReadPost *.clj set ft=clojure
 
 source $HOME/.vim/conf/NERDTree.vim
-source $HOME/.vim/conf/VimClojure.vim
-source $HOME/.vim/conf/ConqueTerm.vim
 source $HOME/.vim/conf/tcomment.vim
-source $HOME/.vim/conf/Ack.vim
 source $HOME/.vim/conf/ZoomWin.vim
-source $HOME/.vim/conf/CommandT.vim
