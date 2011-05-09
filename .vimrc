@@ -47,7 +47,7 @@ set background=dark
 if has("gui_running")
 	set guioptions-=T
 	set t_Co=256
-    colorscheme molokai
+    colorscheme molokai 
 else
     colorscheme ir_black 
 endif
@@ -197,5 +197,9 @@ au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile source $HOME/.
 au BufEnter,BufRead,BufNewFile,FileReadPost *.clj set ft=clojure
 
 source $HOME/.vim/conf/NERDTree.vim
+source $HOME/.vim/conf/VimClojure.vim
+source $HOME/.vim/conf/ConqueTerm.vim
 source $HOME/.vim/conf/tcomment.vim
+source $HOME/.vim/conf/Ack.vim
 source $HOME/.vim/conf/ZoomWin.vim
+source $HOME/.vim/conf/CommandT.vim
