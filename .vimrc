@@ -24,11 +24,6 @@ filetype plugin indent on
 nmap <C-N><C-N> :set invnumber<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Cursor line
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set cursorline
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set encoding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
@@ -48,8 +43,9 @@ if has("gui_running")
 	set guioptions-=T
 	set t_Co=256
     colorscheme molokai 
+    set cursorline " cursor line only when in GUI mode
 else
-    colorscheme ir_black 
+    colorscheme nour 
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
