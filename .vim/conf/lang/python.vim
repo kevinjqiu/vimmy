@@ -3,6 +3,8 @@ source $HOME/.vim/conf/Rope.vim
 " Indent Python in the Google way.
 
 setlocal indentexpr=GetGooglePythonIndent(v:lnum)
+set foldmethod=indent
+set foldlevel=99
 
 let s:maxoff = 50 " maximum number of lines to look backwards.
 
