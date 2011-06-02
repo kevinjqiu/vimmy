@@ -190,10 +190,9 @@ nmap <C-A> ggVG
 au BufEnter,BufRead,BufNewFile,FileReadPost *.py source $HOME/.vim/conf/lang/python.vim
 au BufEnter,BufRead,BufNewFile,FileReadPost *.php source $HOME/.vim/conf/lang/php.vim
 au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile source $HOME/.vim/conf/lang/ruby.vim
-au BufEnter,BufRead,BufNewFile,FileReadPost *.clj set ft=clojure
+au BufEnter,BufRead,BufNewFile,FileReadPost *.clj source $HOME/.vim/conf/VimClojure.vim
 
 source $HOME/.vim/conf/NERDTree.vim
-source $HOME/.vim/conf/VimClojure.vim
 source $HOME/.vim/conf/ConqueTerm.vim
 source $HOME/.vim/conf/tcomment.vim
 source $HOME/.vim/conf/Ack.vim
