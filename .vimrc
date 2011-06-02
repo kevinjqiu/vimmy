@@ -33,7 +33,7 @@ set ff=unix
 " Colours and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if system("uname") =~ 'Darwin'
-    set gfn=Monaco:h12
+    set gfn=Monaco:h13
 else
     set gfn=Monaco\ 10
 endif

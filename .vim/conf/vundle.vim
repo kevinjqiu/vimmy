@@ -11,6 +11,7 @@ Bundle "VimClojure"
 Bundle "https://github.com/vim-ruby/vim-ruby.git"
 Bundle "python.vim"
 Bundle "scala.vim"
+Bundle "snipMate"
 
 Bundle "Markdown"
 Bundle "Gist.vim"
