@@ -10,6 +10,8 @@ Bundle "https://github.com/tpope/vim-fugitive.git"
 Bundle "VimClojure"
 Bundle "https://github.com/vim-ruby/vim-ruby.git"
 Bundle "python.vim"
+Bundle "pyflakes"
+Bundle "pyflakes.vim"
 Bundle "scala.vim"
 Bundle "snipMate"
 
