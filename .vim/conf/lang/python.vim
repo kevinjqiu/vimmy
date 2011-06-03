@@ -2,7 +2,7 @@ source $HOME/.vim/conf/Rope.vim
 
 " Indent Python in the Google way.
 
-setlocal indentexpr=GetGooglePythonIndent(v:lnum)
+" setlocal indentexpr=GetGooglePythonIndent(v:lnum)
 set foldmethod=indent
 set foldlevel=99
 
