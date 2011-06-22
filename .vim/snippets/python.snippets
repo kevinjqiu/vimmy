@@ -1,10 +1,11 @@
 snippet pdb
 	import pdb; pdb.set_trace()
-
 snippet only
 	from nose.plugins.attrib import attr
 	@attr('only')
-
 snippet dbecho
 	from evolve.lib.debug import db_echo
 	with db_echo(self, ${1}):
+snippet attr
+	from evolve.lib.helpers import attribute_context
+	with attribute_context(${1}, ${2}) as ${3}:
