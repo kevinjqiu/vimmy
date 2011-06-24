@@ -35,7 +35,7 @@ set ff=unix
 if system("uname") =~ 'Darwin'
     set gfn=Monaco:h13
 else
-    set gfn=Monaco\ 10
+    set gfn=Monaco\ 9
 endif
 
 set background=dark
