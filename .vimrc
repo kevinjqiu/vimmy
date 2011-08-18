@@ -67,6 +67,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+" highlight the word under cursor (with hlsearch on)
+nnoremap <Leader>g *N
 nnoremap / /\v
 vnoremap / /\v
 nnoremap <leader><space> :noh<cr>
