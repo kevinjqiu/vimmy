@@ -200,3 +200,8 @@ source $HOME/.vim/conf/tcomment.vim
 source $HOME/.vim/conf/Ack.vim
 source $HOME/.vim/conf/ZoomWin.vim
 source $HOME/.vim/conf/CommandT.vim
+
+" overwrite with local settings if .vimrc.local exists
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
