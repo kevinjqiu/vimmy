@@ -151,7 +151,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap <C-Space> <C-x><C-o> 
 inoremap jj <ESC>
-nnoremap jq <ESC>:q<CR>
 map :tn :tabnew<CR>
 map :tt :tabn<CR>
 map <Leader>T :tabnew<CR>
