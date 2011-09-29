@@ -1,4 +1,4 @@
 *.log
 bundle/
-backup/
+backup/*.swp
 .netrwhist
