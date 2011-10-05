@@ -1,4 +1,4 @@
 *.log
 bundle/
-backup/
+vim/backup/*.swp
 .netrwhist
