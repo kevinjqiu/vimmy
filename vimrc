@@ -174,12 +174,13 @@ map <Leader>. :bp<CR>
 
 nmap <C-A> ggVG
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Full screen mode
+" Full screen mode (only works in MacVim)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set fuopt+=maxhorz                      " grow to maximum horizontal width on entering fullscreen mode
-nmap <C-f> :set invfu<CR>                " toggle fullscreen mode
+if system("uname") =~ 'Darwin'
+    set fuopt+=maxhorz                      " grow to maximum horizontal width on entering fullscreen mode
+    nmap <C-f> :set invfu<CR>                " toggle fullscreen mode
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
