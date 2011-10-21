@@ -152,6 +152,8 @@ map t7 7gt
 map t8 8gt
 map t9 9gt
 
+nnoremap Q :tabc<CR>
+
 nnoremap <C-h> :tabp<CR>
 nnoremap <C-l> :tabn<CR>
 " Ctrl-j = page down
