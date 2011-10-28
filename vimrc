@@ -151,6 +151,10 @@ map t6 6gt
 map t7 7gt
 map t8 8gt
 map t9 9gt
+map <F3> :Tlist<CR>
+map <Leader>B :!ctags -R .<CR>
+map <Leader>v :tabnew ~/.vimrc<CR>
+nnoremap <Leader>q :q<CR>
 
 nnoremap Q :tabc<CR>
 
@@ -198,6 +202,7 @@ source $HOME/.vim/conf/tcomment.vim
 source $HOME/.vim/conf/Ack.vim
 source $HOME/.vim/conf/ZoomWin.vim
 source $HOME/.vim/conf/CommandT.vim
+source $HOME/.vim/conf/spectrum.vim
 
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
