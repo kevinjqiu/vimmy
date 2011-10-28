@@ -15,6 +15,11 @@ Build Command-T
 * ruby extconf.rb
 * make
 
+Install ctags
+-------------
+``sudo easy_install python-ctags``
+``sudo apt-get install exuberant-ctags``
+
 Included Plugins
 ----------------
 Take a look [here](https://github.com/kevinjqiu/vimmy/blob/master/.vim/conf/vundle.vim)
@@ -23,6 +28,7 @@ Needs Install
 -------------
 * pyflakes.vim
 * rope/ropemode/ropevim
+* exuberant-ctags
 
 TODO
 ----
