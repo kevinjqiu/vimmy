@@ -3,8 +3,8 @@ source $HOME/.vim/conf/Rope.vim
 " Indent Python in the Google way.
 
 " setlocal indentexpr=GetGooglePythonIndent(v:lnum)
-set foldmethod=indent
-set foldlevel=99
+setlocal foldmethod=indent
+setlocal foldlevel=99
 
 let s:maxoff = 50 " maximum number of lines to look backwards.
 
@@ -39,12 +39,12 @@ let s:maxoff = 50 " maximum number of lines to look backwards.
 let pyindent_nested_paren="&sw*2"
 let pyindent_open_paren="&sw*2"
 
-set textwidth=80 
-set tabstop=4
-set shiftwidth=4 
-set softtabstop=4 
-set autoindent
+setlocal textwidth=80 
+setlocal tabstop=4
+setlocal shiftwidth=4 
+setlocal softtabstop=4 
+setlocal autoindent
 let python_highlight_all = 1
 " Smart indent
-set smartindent
-set cinwords=if,elif,else,for,while,try,except,finally,def,class
+setlocal smartindent
+setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class
