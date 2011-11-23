@@ -11,7 +11,7 @@ endfunction
 
 function! _GetPythonClassName()
     let register_backup = @"
-    normal ggVGy
+    normal mzggVGy`z
     let content = @"
     let @" = register_backup
 
