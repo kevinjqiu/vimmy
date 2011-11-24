@@ -1,5 +1,5 @@
 let g:fb_nose_options = "--rednose --verbosity=1"
-let g:fb_test_runner = "nosetests " . s:nose_options . " "
+let g:fb_test_runner = "nosetests " . g:fb_nose_options . " "
 
 function! _GetWordUnderCursor()
     let register_backup = @"
@@ -32,13 +32,13 @@ function! Nose_RunTestUnderCursor()
     echom test_name
     let path = _FixPath(@%)
     let class_name = _GetPythonClassName()
-    let cmd = g:fb_test_runner . " " . g:fb_nose_options . " " . path . ":" . class_name . "." . test_name
+    let cmd = g:fb_test_runner . " " . path . ":" . class_name . "." . test_name
     echom cmd
     call SlimeSend(cmd . "\n")
 endfunction
 
 function! Nose_RunCurrentFile()
-    let cmd = g:fb_test_runner . " " . g:fb_nose_options . " " . _FixPath(@%)
+    let cmd = g:fb_test_runner . " " . _FixPath(@%)
     echom cmd
     call SlimeSend(cmd . "\n")
 endfunction
