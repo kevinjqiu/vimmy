@@ -1,6 +1,7 @@
 set rtp+=$HOME/.vim/vundle
 call vundle#rc()
 
+Bundle "ctrlp.vim"
 Bundle "Command-T"
 Bundle "ack.vim"
 Bundle "https://github.com/scrooloose/nerdtree.git"

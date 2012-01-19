@@ -1,4 +1,4 @@
-let g:fb_nose_options = "--rednose --verbosity=1"
+let g:fb_nose_options = "--rednose --verbosity=1 -s"
 let g:fb_test_runner = "nosetests " . g:fb_nose_options . " "
 
 function! _GetWordUnderCursor()
@@ -24,7 +24,7 @@ function! _GetPythonClassName()
 endfunction
 
 function! _FixPath(path)
-    return join(split(a:path, "/")[1:], "/")
+    return join(split(a:path, "/"), "/")
 endfunction
 
 function! Nose_RunTestUnderCursor()
