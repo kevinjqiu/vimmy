@@ -36,8 +36,8 @@ let s:maxoff = 50 " maximum number of lines to look backwards.
 " 
 " endfunction
 
-let pyindent_nested_paren="&sw*2"
-let pyindent_open_paren="&sw*2"
+let pyindent_nested_paren="&sw"
+let pyindent_open_paren="&sw"
 
 setlocal textwidth=80 
 setlocal tabstop=4

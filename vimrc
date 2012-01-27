@@ -198,15 +198,13 @@ au BufEnter,BufRead,BufNewFile,FileReadPost *.clj source $HOME/.vim/conf/VimCloj
 au BufEnter,BufRead,BufNewFile,FileReadPost *.scala set ft=scala
 
 source $HOME/.vim/conf/NERDTree.vim
-source $HOME/.vim/conf/ConqueTerm.vim
+source $HOME/.vim/conf/ctrlp.vim
 source $HOME/.vim/conf/tcomment.vim
 source $HOME/.vim/conf/Ack.vim
 source $HOME/.vim/conf/ZoomWin.vim
-" source $HOME/.vim/conf/CommandT.vim
 source $HOME/.vim/conf/spectrum.vim
 source $HOME/.vim/conf/pyflakes.vim
 source $HOME/.vim/conf/FreshBooks.vim
-source $HOME/.vim/conf/ctrlp.vim
 
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
