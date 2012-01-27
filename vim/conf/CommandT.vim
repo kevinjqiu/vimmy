@@ -1,1 +1,0 @@
-set wildignore+=*.pyc,*.egg/
