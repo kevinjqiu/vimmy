@@ -85,7 +85,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc
 " Status bar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remember last location in file
@@ -205,6 +205,7 @@ source $HOME/.vim/conf/ZoomWin.vim
 source $HOME/.vim/conf/spectrum.vim
 source $HOME/.vim/conf/pyflakes.vim
 source $HOME/.vim/conf/FreshBooks.vim
+source $HOME/.vim/conf/powerline.vim
 
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
