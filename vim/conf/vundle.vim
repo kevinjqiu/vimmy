@@ -13,7 +13,6 @@ Bundle "https://github.com/vim-ruby/vim-ruby.git"
 Bundle "pyflakes.vim"
 Bundle "scala.vim"
 Bundle "snipMate"
-Bundle "YankRing.vim"
 
 " Bundle "Markdown"
 " Bundle "Gist.vim"
