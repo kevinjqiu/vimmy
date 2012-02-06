@@ -154,17 +154,23 @@ map t9 9gt
 map <F3> :Tlist<CR>
 map <Leader>B :!ctags -R .<CR>
 map <Leader>v :tabnew ~/.vimrc<CR>
+map <Leader>V :tabnew ~/.vimrc.local<CR>
 nnoremap <Leader>q :q<CR>
 
 nnoremap Q :tabc<CR>
 
-nnoremap <C-h> :tabp<CR>
-nnoremap <C-l> :tabn<CR>
+nnoremap <C-s-h> :tabp<CR>
+nnoremap <C-s-l> :tabn<CR>
 " Ctrl-j = page down
-nnoremap <C-j> <C-d>
+nnoremap <C-s-j> <C-d>
 " Ctrl-k = page up
-nnoremap <C-k> <C-b>
+nnoremap <C-s-k> <C-b>
 imap <C-Space> <C-x><C-o>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 
 " toggle show whitespace
 nmap <Leader>w :set list!<CR>
