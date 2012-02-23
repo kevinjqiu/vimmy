@@ -45,7 +45,7 @@ if has("gui_running")
     colorscheme molokai 
     set cursorline " cursor line only when in GUI mode
 else
-    colorscheme nour 
+    colorscheme wombat256mod
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
