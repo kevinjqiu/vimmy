@@ -40,8 +40,8 @@ endif
 
 set background=dark
 if has("gui_running")
-	set guioptions-=T
-	set t_Co=256
+    set guioptions-=T
+    set t_Co=256
     colorscheme molokai 
     set cursorline " cursor line only when in GUI mode
 else
@@ -159,12 +159,8 @@ nnoremap <Leader>q :q<CR>
 
 nnoremap Q :tabc<CR>
 
-nnoremap <C-s-h> :tabp<CR>
-nnoremap <C-s-l> :tabn<CR>
-" Ctrl-j = page down
-nnoremap <C-s-j> <C-d>
-" Ctrl-k = page up
-nnoremap <C-s-k> <C-b>
+nnoremap <C-u> :tabp<CR>
+nnoremap <C-p> :tabn<CR>
 imap <C-Space> <C-x><C-o>
 
 nnoremap <C-h> <C-w>h
