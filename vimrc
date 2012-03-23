@@ -196,7 +196,7 @@ endif
 au BufEnter,BufRead,BufNewFile,FileReadPost *.py source $HOME/.vim/conf/lang/python.vim
 au BufEnter,BufRead,BufNewFile,FileReadPost *.php source $HOME/.vim/conf/lang/php.vim
 au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile source $HOME/.vim/conf/lang/ruby.vim
-au BufEnter,BufRead,BufNewFile,FileReadPost *.clj source $HOME/.vim/conf/VimClojure.vim
+au BufEnter,BufRead,BufNewFile,FileReadPost *.clj,*.cljs source $HOME/.vim/conf/VimClojure.vim
 au BufEnter,BufRead,BufNewFile,FileReadPost *.scala set ft=scala
 
 source $HOME/.vim/conf/NERDTree.vim
