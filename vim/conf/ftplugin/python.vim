@@ -1,7 +1,25 @@
-source $HOME/.vim/conf/Rope.vim
+" vim: foldmethod=marker
+" Section: RopeVim config {{{1
+"
+source $HOME/src/rope/ropevim/ropevim.vim
+let ropevim_codeassist_maxfiexes=10
+let ropevim_guess_project=1
+let ropevim_vim_completion=1
+let ropevim_enable_autoimport=1
+let ropevim_extended_complete=1
+nmap <Leader>gd :RopeGotoDefinition<CR>
+nmap <Leader>gD :let ropevim_goto_def_newwin=1<CR>:RopeGotoDefinition<CR>:let ropevim_goto_def_newwin=0<CR>
+nmap <Leader>gf :RopeFindOccurrences<CR>
+nmap <Leader>ai :RopeAutoImport<CR>
+" 1}}}
 
+" Section: Pyflakes config {{{1
+" Tell pyflake not to mess with quickfix window
+let g:pyflakes_use_quickfix=0
+" 1}}}
+
+" Section: Google's coding standards {{{1
 " Indent Python in the Google way.
-
 " setlocal indentexpr=GetGooglePythonIndent(v:lnum)
 setlocal foldmethod=indent
 setlocal foldlevel=99
@@ -38,6 +56,7 @@ let s:maxoff = 50 " maximum number of lines to look backwards.
 
 let pyindent_nested_paren="&sw"
 let pyindent_open_paren="&sw"
+" 1}}}
 
 setlocal textwidth=80 
 setlocal tabstop=4
