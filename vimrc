@@ -1,6 +1,7 @@
 set nocompatible
 " Vundle needs to be sourced first 
 source $HOME/.vim/conf/vundle.vim
+set rtp+=$HOME/.vim/conf
 
 set ruler
 " keep cusion space when scrolling up/down
@@ -193,10 +194,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufEnter,BufRead,BufNewFile,FileReadPost *.py source $HOME/.vim/conf/lang/python.vim
-au BufEnter,BufRead,BufNewFile,FileReadPost *.php source $HOME/.vim/conf/lang/php.vim
-au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile source $HOME/.vim/conf/lang/ruby.vim
-au BufEnter,BufRead,BufNewFile,FileReadPost *.clj,*.cljs source $HOME/.vim/conf/VimClojure.vim
+au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile set ft=ruby
+au BufEnter,BufRead,BufNewFile,FileReadPost *.clj,*.cljs set ft=clojure
 au BufEnter,BufRead,BufNewFile,FileReadPost *.scala set ft=scala
 
 source $HOME/.vim/conf/NERDTree.vim
