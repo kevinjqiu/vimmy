@@ -2,21 +2,25 @@ Build Instruction
 =================
 
 In home directory:
-``bash
+```bash
 ln -s `pwd`/vimmy/vimrc `pwd`/.vimrc
-``
+```
 
-``bash
+```bash
 ln -s `pwd`/vimmy/vim `pwd`/.vim
-``
+```
 
 in the repository root directory (vimmy), execute: `git submodule init && git submodule update`
 Launch vim, enter :BundleInstall
 
 Install ctags
 -------------
-``sudo easy_install python-ctags``
-``sudo apt-get install exuberant-ctags``
+```bash
+sudo easy_install python-ctags
+```
+
+```sudo apt-get install exuberant-ctags
+```
 
 Included Plugins
 ----------------
