@@ -6,3 +6,4 @@ let g:ctrlp_custom_ignore = {
     \ 'dir': '\.git$\|\.hg$\|\.svn$\|.*\.egg$\|build$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$'
     \ }
+nmap <Leader>t :CtrlP<CR>
