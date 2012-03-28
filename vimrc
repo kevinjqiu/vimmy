@@ -86,6 +86,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc
 " Status bar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
+" Powerline is managing my status line now.
 " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -123,9 +124,6 @@ map <A-j> gj
 map <A-k> gk
 imap <A-j> <Esc>gji
 imap <A-k> gki
-
-" fix typos for me please
-abbreviate slef self
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Alt-Up/Down: Don't skip wrapped lines when navigating
