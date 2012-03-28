@@ -20,7 +20,8 @@ Install ctags
 sudo easy_install python-ctags
 ```
 
-```sudo apt-get install exuberant-ctags
+```bash
+sudo apt-get install exuberant-ctags
 ```
 
 Included Plugins
