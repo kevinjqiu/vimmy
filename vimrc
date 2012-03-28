@@ -201,7 +201,6 @@ au BufEnter,BufRead,BufNewFile,FileReadPost *.scala set ft=scala
 
 source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/ctrlp.vim
-source $HOME/.vim/conf/tcomment.vim
 source $HOME/.vim/conf/Ack.vim
 source $HOME/.vim/conf/ZoomWin.vim
 source $HOME/.vim/conf/spectrum.vim
