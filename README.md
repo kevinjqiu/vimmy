@@ -2,6 +2,7 @@ Build Instruction
 =================
 
 In home directory:
+
 ```bash
 ln -s `pwd`/vimmy/vimrc `pwd`/.vimrc
 ```
