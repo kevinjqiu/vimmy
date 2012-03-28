@@ -194,10 +194,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufEnter,BufRead,BufNewFile,FileReadPost *.rb,Gemfile,Rakefile set ft=ruby
-au BufEnter,BufRead,BufNewFile,FileReadPost *.clj,*.cljs set ft=clojure
-au BufEnter,BufRead,BufNewFile,FileReadPost *.scala set ft=scala
-
 source $HOME/.vim/conf/NERDTree.vim
 source $HOME/.vim/conf/ctrlp.vim
 source $HOME/.vim/conf/Ack.vim
