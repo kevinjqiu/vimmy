@@ -7,3 +7,8 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$'
     \ }
 nmap <Leader>t :CtrlP<CR>
+
+" remap g:ctrlp_map to CtrlP, because plugins/* is loaded after
+" ctrlp.vim, which already did the mapping, and since my g:ctrlp_map
+" wasn't present at that time, it used the default.
+exe 'nn <silent>' g:ctrlp_map ':<c-u>CtrlP<cr>'
