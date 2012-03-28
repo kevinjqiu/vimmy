@@ -191,18 +191,6 @@ if system("uname") =~ 'Darwin'
     nmap <C-f> :set invfu<CR>                " toggle fullscreen mode
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin configs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source $HOME/.vim/conf/NERDTree.vim
-source $HOME/.vim/conf/ctrlp.vim
-source $HOME/.vim/conf/Ack.vim
-source $HOME/.vim/conf/ZoomWin.vim
-source $HOME/.vim/conf/spectrum.vim
-source $HOME/.vim/conf/pyflakes.vim
-source $HOME/.vim/conf/FreshBooks.vim
-source $HOME/.vim/conf/powerline.vim
-
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
