@@ -189,6 +189,8 @@ if system("uname") =~ 'Darwin'
     nmap <C-f> :set invfu<CR>                " toggle fullscreen mode
 endif
 
+call vimmy#load_plugin_conf("$HOME/.vim/conf/plugin_conf")
+
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
