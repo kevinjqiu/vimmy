@@ -140,7 +140,7 @@ inoremap <C-Space> <C-x><C-o>
 inoremap jj <ESC>
 map :tn :tabnew<CR>
 map :tt :tabn<CR>
-map <Leader>T :tabnew<CR>
+map <silent><Leader>T :tabnew<CR>
 map t1 1gt
 map t2 2gt
 map t3 3gt
@@ -158,8 +158,8 @@ nnoremap <Leader>q :q<CR>
 
 nnoremap Q :tabc<CR>
 
-nnoremap <C-u> :tabp<CR>
-nnoremap <C-p> :tabn<CR>
+nnoremap <silent><C-u> :tabp<CR>
+nnoremap <silent><C-p> :tabn<CR>
 imap <C-Space> <C-x><C-o>
 
 nnoremap <C-h> <C-w>h
