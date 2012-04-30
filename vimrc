@@ -150,7 +150,8 @@ map t6 6gt
 map t7 7gt
 map t8 8gt
 map t9 9gt
-map <F3> :Tlist<CR>
+
+map <F3> :TagbarToggle<CR>
 map <Leader>B :!ctags -R .<CR>
 map <Leader>v :tabnew ~/.vimrc<CR>
 map <Leader>V :tabnew ~/.vimrc.local<CR>
