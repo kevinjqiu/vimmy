@@ -1,47 +1,40 @@
 import os
 import commands
 import json
-from os.path import abspath
-from os.path import exists
-from os.path import join as pjoin
-from os.path import isdir
-from fabric.colors import red
-from fabric.colors import yellow
+from os.path import abspath as _abspath
+from os.path import exists as _exists
+from os.path import join as _pjoin
+from os.path import isdir as _isdir
+from fabric.colors import red as _red
+from fabric.colors import yellow as _yellow
 # from fabric.context_managers import lcd
 # from fabric.api import local
 
 ALL = ('ALL', 'all', '*')
 PATHOGEN_URL = "https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
 
-BUNDLE_DIR = abspath('vim/bundle')
-ENABLED_DIR = abspath('vim/enabled')
-CURRENT_DIR = abspath('.')
-MANIFEST = abspath('manifest.json')
+BUNDLE_DIR = _abspath('vim/bundle')
+ENABLED_DIR = _abspath('vim/enabled')
+CURRENT_DIR = _abspath('.')
+MANIFEST = _abspath('manifest.json')
 
-def info(text):
+def _info(text):
     print(text)
 
-def warn(text):
-    print(yellow(text))
+def _warn(text):
+    print(_yellow(text))
 
-def err(text):
-    print(red(text))
+def _err(text):
+    print(_red(text))
 
-def update_pathogen():
-    """Fetch the latest pathogen script and install it under ~/.vim/autoload"""
-    if not exists(abspath('vim/autoload')):
-        os.mkdir('vim/autoload')
-    os.system('curl -o vim/autoload/pathogen.vim %s 2>/dev/null' % PATHOGEN_URL)
-    info("Pathogen is updated.")
-
-def get_plugins_from_dir(dir_name):
+def _get_plugins_from_dir(dir_name):
     plugins = os.listdir(dir_name)
     retval = []
     for plugin in plugins:
-        dirname = pjoin(dir_name, plugin)
-        if isdir(dirname):
-            if exists(pjoin(dirname, '.git')):
-                os.chdir(pjoin(dirname, '.git'))
+        dirname = _pjoin(dir_name, plugin)
+        if _isdir(dirname):
+            if _exists(_pjoin(dirname, '.git')):
+                os.chdir(_pjoin(dirname, '.git'))
                 output = commands.getoutput('git config -l | grep remote.origin.url')
                 _, url = output.split('=')
                 os.chdir(CURRENT_DIR)
@@ -49,34 +42,44 @@ def get_plugins_from_dir(dir_name):
 
     return retval
 
-def list(filter='all'):
+def update_pathogen():
+    """Fetch the latest pathogen script and install it under ~/.vim/autoload"""
+    if not _exists(_abspath('vim/autoload')):
+        os.mkdir('vim/autoload')
+    os.system('curl -o vim/autoload/pathogen.vim %s 2>/dev/null' % PATHOGEN_URL)
+    _info("Pathogen is updated.")
+
+def list(filter='all', detailed=False):
     def _display(plugins):
         for plugin in plugins:
-            info(plugin)
+            if bool(detailed):
+                _info(plugin)
+            else:
+                _info(plugin['name'])
 
     if filter in ALL:
-        _display(get_plugins_from_dir(BUNDLE_DIR))
+        _display(_get_plugins_from_dir(BUNDLE_DIR))
     elif filter == 'enabled':
-        _display(get_plugins_from_dir(ENABLED_DIR))
+        _display(_get_plugins_from_dir(ENABLED_DIR))
     else:
-        err("filter is one of ('all', 'enabled')")
+        _err("filter is one of ('all', 'enabled')")
 
 def enable(plugin_name):
     """Enable the plugin by symlinking it to the enabled/ directory"""
-    if exists(pjoin(ENABLED_DIR, plugin_name)):
-        info('%s is already enabled.' % plugin_name)
+    if _exists(_pjoin(ENABLED_DIR, plugin_name)):
+        _info('%s is already enabled.' % plugin_name)
         return
-    if not exists(pjoin(BUNDLE_DIR, plugin_name)):
+    if not _exists(_pjoin(BUNDLE_DIR, plugin_name)):
         red("%s doesn't exist in your plugin repo. Install it first." % plugin_name)
         return
-    os.symlink(pjoin(BUNDLE_DIR, plugin_name), pjoin(ENABLED_DIR, plugin_name))
+    os.symlink(_pjoin(BUNDLE_DIR, plugin_name), _pjoin(ENABLED_DIR, plugin_name))
 
 def disable(plugin_name):
     """Disable the plugin by removing the symlink from enabled/ directory"""
-    if not exists(pjoin(ENABLED_DIR, plugin_name)):
-        info('%s is not enabled.' % plugin_name)
+    if not _exists(_pjoin(ENABLED_DIR, plugin_name)):
+        _info('%s is not enabled.' % plugin_name)
         return
-    os.unlink(pjoin(ENABLED_DIR, plugin_name))
+    os.unlink(_pjoin(ENABLED_DIR, plugin_name))
 
 def install(plugin_spec):
     """Install the plugin, update the manifest if update_manifest is True"""
@@ -89,16 +92,17 @@ def install(plugin_spec):
 
 def manifest():
     """Update the manifest file"""
-    plugins = get_plugins_from_dir(ENABLED_DIR)
+    plugins = _get_plugins_from_dir(ENABLED_DIR)
     with open(MANIFEST, 'w') as f:
         json.dump(plugins, f)
-    info('%s is updated' % MANIFEST)
+    _info('%s is updated' % MANIFEST)
 
 def manifest_install(manifest_file=MANIFEST):
+    """Bulk install plugins from manifest file"""
     with open(MANIFEST, 'r') as f:
         plugins = json.load(f)
         for plugin in plugins:
-            info("Installing %s..." % plugin['name'])
+            _info("Installing %s..." % plugin['name'])
             install(plugin['url'])
 
 def helptags():
