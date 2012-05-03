@@ -42,6 +42,17 @@ def _get_plugins_from_dir(dir_name):
 
     return retval
 
+def _asbool(val):
+    if isinstance(val, bool):
+        return val
+
+    if val.lower() in ('true', 'yes', '1'):
+        return True
+    elif val.lower() in ('false', 'no', '0'):
+        return False
+    else:
+        raise TypeError('val must be true/false/1/0')
+
 def update_pathogen():
     """Fetch the latest pathogen script and install it under ~/.vim/autoload"""
     if not _exists(_abspath('vim/autoload')):
@@ -52,7 +63,7 @@ def update_pathogen():
 def list(filter='all', detailed=False):
     def _display(plugins):
         for plugin in plugins:
-            if bool(detailed):
+            if _asbool(detailed):
                 _info(plugin)
             else:
                 _info(plugin['name'])
@@ -70,7 +81,7 @@ def enable(plugin_name):
         _info('%s is already enabled.' % plugin_name)
         return
     if not _exists(_pjoin(BUNDLE_DIR, plugin_name)):
-        red("%s doesn't exist in your plugin repo. Install it first." % plugin_name)
+        _err("%s doesn't exist in your plugin repo. Install it first." % plugin_name)
         return
     os.symlink(_pjoin(BUNDLE_DIR, plugin_name), _pjoin(ENABLED_DIR, plugin_name))
 
