@@ -1,5 +1,9 @@
+syntax: glob
 *.log
-bundle/
 vim/backup/*.swp
 .netrwhist
-.pyc
+vim/enabled
+*.pyc
+pathogen.vim
+vim/bundle/*
+!vim/bundle/_local
