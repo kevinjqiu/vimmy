@@ -134,6 +134,10 @@ def helptags():
 
 def bootstrap():
     """Bootstrap a vimmy system"""
+    if _exists(DOT_VIM_DIR):
+        os.unlink(DOT_VIM_DIR)
+    if _exists(DOT_VIMRC):
+        os.unlink(DOT_VIMRC)
     os.symlink(VIM_DIR, DOT_VIM_DIR)
     _info('%s linked to %s' % (VIM_DIR, DOT_VIM_DIR))
     os.symlink(VIMRC, DOT_VIMRC)
@@ -141,3 +145,4 @@ def bootstrap():
     pathogen()
     manifest_install()
     enable('_local')
+    helptags()
