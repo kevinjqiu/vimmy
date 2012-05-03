@@ -190,7 +190,7 @@ endif
 
 
 " TEMPORARY HACK
-source ~/.vim/enabled/local/plugin/ctrlp.vim
+source ~/.vim/enabled/_local/plugin/ctrlp.vim
 
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
