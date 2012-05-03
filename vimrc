@@ -1,7 +1,6 @@
 set nocompatible
 " Vundle needs to be sourced first 
 call pathogen#infect('enabled')
-set rtp+=$HOME/.vim/conf
 
 set ruler
 " keep cusion space when scrolling up/down
@@ -189,7 +188,9 @@ if system("uname") =~ 'Darwin'
     nmap <C-f> :set invfu<CR>                " toggle fullscreen mode
 endif
 
-call vimmy#load_plugin_conf("$HOME/.vim/conf/plugin_conf")
+
+" TEMPORARY HACK
+source ~/.vim/enabled/local/plugin/ctrlp.vim
 
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
