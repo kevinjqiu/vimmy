@@ -2,10 +2,11 @@ import os
 from os.path import abspath
 from os.path import exists
 from os.path import join as pjoin
-from fabric.colors import green
 from fabric.colors import red
+from fabric.colors import yellow
 # from fabric.api import local
 
+ALL = ('ALL', 'all', '*')
 PATHOGEN_URL = "https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
 
 BUNDLE_DIR = abspath('vim/bundle')
@@ -36,7 +37,7 @@ def list(filter='all'):
         plugins = os.listdir(dir_name)
         return [x for x in plugins if x != 'KEEPME']
 
-    if filter == 'all':
+    if filter in ALL:
         _display(get_plugins_from_dir(BUNDLE_DIR))
     elif filter == 'enabled':
         _display(get_plugins_from_dir(ENABLED_DIR))
