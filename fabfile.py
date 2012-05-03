@@ -15,6 +15,7 @@ PATHOGEN_URL = "https://raw.github.com/tpope/vim-pathogen/master/autoload/pathog
 
 BUNDLE_DIR = _abspath('vim/bundle')
 ENABLED_DIR = _abspath('vim/enabled')
+AUTOLOAD_DIR = _abspath('vim/autoload')
 CURRENT_DIR = _abspath('.')
 MANIFEST = _abspath('manifest.json')
 
@@ -53,11 +54,11 @@ def _asbool(val):
     else:
         raise TypeError('val must be true/false/1/0')
 
-def update_pathogen():
+def pathogen():
     """Fetch the latest pathogen script and install it under ~/.vim/autoload"""
-    if not _exists(_abspath('vim/autoload')):
-        os.mkdir('vim/autoload')
-    os.system('curl -o vim/autoload/pathogen.vim %s 2>/dev/null' % PATHOGEN_URL)
+    if not _exists(AUTOLOAD_DIR):
+        os.mkdir(AUTOLOAD_DIR)
+    os.system('curl -so %s %s 2>/dev/null' % (_pjoin(AUTOLOAD_DIR, 'pathogen.vim'), PATHOGEN_URL))
     _info("Pathogen is updated.")
 
 def list(filter='all', detailed=False):
