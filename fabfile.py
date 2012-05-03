@@ -13,11 +13,16 @@ from fabric.colors import yellow as _yellow
 ALL = ('ALL', 'all', '*')
 PATHOGEN_URL = "https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
 
+VIM_DIR = _abspath('vim')
+VIMRC = _abspath('vimrc')
 BUNDLE_DIR = _abspath('vim/bundle')
 ENABLED_DIR = _abspath('vim/enabled')
 AUTOLOAD_DIR = _abspath('vim/autoload')
 CURRENT_DIR = _abspath('.')
 MANIFEST = _abspath('manifest.json')
+
+DOT_VIM_DIR = _abspath(os.path.expanduser('~/.vim'))
+DOT_VIMRC = _abspath(os.path.expanduser('~/.vimrc'))
 
 def _info(text):
     print(text)
@@ -126,3 +131,12 @@ def manifest_install(manifest_file=MANIFEST):
 def helptags():
     """Build help tags"""
     os.system('vim +"helptags %s" +qall' % ENABLED_DIR)
+
+def bootstrap():
+    """Bootstrap a vimmy system"""
+    os.symlink(VIM_DIR, DOT_VIM_DIR)
+    _info('%s linked to %s' % (VIM_DIR, DOT_VIM_DIR))
+    os.symlink(VIMRC, DOT_VIMRC)
+    _info('%s linked to %s' % (VIMRC, DOT_VIMRC))
+    pathogen()
+    manifest_install()
