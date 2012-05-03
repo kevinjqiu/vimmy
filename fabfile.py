@@ -61,7 +61,12 @@ def update_pathogen():
     _info("Pathogen is updated.")
 
 def list(filter='all', detailed=False):
-    """List the plugins"""
+    """List the plugins
+
+    :param: filter can be 'all' or 'enabled'
+    :param: detailed if True, print the details of the plugin,
+                     or just the plugin name if False
+    """
     def _display(plugins):
         for plugin in plugins:
             if _asbool(detailed):
