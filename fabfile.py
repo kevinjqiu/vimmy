@@ -39,7 +39,7 @@ def _get_plugins_from_dir(dir_name):
                 output = commands.getoutput('git config -l | grep remote.origin.url')
                 _, url = output.split('=')
                 os.chdir(CURRENT_DIR)
-            retval.append(dict(name=plugin, url=url))
+                retval.append(dict(name=plugin, url=url))
 
     return retval
 
@@ -112,7 +112,7 @@ def manifest():
     """Update the manifest file"""
     plugins = _get_plugins_from_dir(ENABLED_DIR)
     with open(MANIFEST, 'w') as f:
-        json.dump(plugins, f)
+        json.dump(plugins, f, indent=4)
     _info('%s is updated' % MANIFEST)
 
 def manifest_install(manifest_file=MANIFEST):
