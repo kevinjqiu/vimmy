@@ -4,3 +4,4 @@ vim/backup/*.swp
 .netrwhist
 vim/enabled
 *.pyc
+pathogen.vim
