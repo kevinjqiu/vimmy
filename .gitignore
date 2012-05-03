@@ -2,3 +2,4 @@
 bundle/
 vim/backup/*.swp
 .netrwhist
+.pyc
