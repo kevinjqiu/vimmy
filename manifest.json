@@ -28,6 +28,10 @@
         "name": "scala.vim"
     }, 
     {
+        "url": "https://github.com/hukl/Smyck-Color-Scheme.git", 
+        "name": "Smyck-Color-Scheme"
+    }, 
+    {
         "url": "http://github.com/vim-scripts/snipMate.git", 
         "name": "snipMate"
     }, 
