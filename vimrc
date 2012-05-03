@@ -1,6 +1,6 @@
 set nocompatible
 " Vundle needs to be sourced first 
-source $HOME/.vim/conf/vundle.vim
+call pathogen#infect('enabled')
 set rtp+=$HOME/.vim/conf
 
 set ruler
