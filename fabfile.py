@@ -109,7 +109,7 @@ def install(plugin_spec):
     if plugin_spec.startswith('git://') or plugin_spec.startswith('https://'):
         plugin_name = plugin_spec.split('/')[-1].split('.git')[0]
         os.chdir(BUNDLE_DIR)
-        os.system('git clone %s' % plugin_spec)
+        os.system('env GIT_SSL_NO_VERIFY=true git clone %s' % plugin_spec)
         os.chdir(CURRENT_DIR)
         enable(plugin_name)
 
@@ -140,3 +140,4 @@ def bootstrap():
     _info('%s linked to %s' % (VIMRC, DOT_VIMRC))
     pathogen()
     manifest_install()
+    enable('_local')
