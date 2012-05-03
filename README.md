@@ -1,18 +1,31 @@
 Build Instruction
 =================
 
-In home directory:
+* Dependencies:
+  - python2.6+
+  - fabric
+
+* Checkout vimmy
 
 ```bash
-ln -s `pwd`/vimmy/vimrc `pwd`/.vimrc
+git clone git://github.com/kevinjqiu/vimmy.git
 ```
+
+* Bootstrap
+
+Under ``vimmy`` folder:
 
 ```bash
-ln -s `pwd`/vimmy/vim `pwd`/.vim
+fab bootstrap
 ```
 
-in the repository root directory (vimmy), execute: `git submodule init && git submodule update`
-Launch vim, enter :BundleInstall
+TODO
+----
+* Automatically install dependencies (pyflakes, rope, exuberant-ctags)
+    - pyflakes.vim
+    - rope/ropemode/ropevim
+    - exuberant-ctags
+* More doc on fab commands
 
 Install ctags
 -------------
@@ -23,18 +36,3 @@ sudo easy_install python-ctags
 ```bash
 sudo apt-get install exuberant-ctags
 ```
-
-Included Plugins
-----------------
-Take a look [here](https://github.com/kevinjqiu/vimmy/blob/master/.vim/conf/vundle.vim)
-
-Needs Install
--------------
-* pyflakes.vim
-* rope/ropemode/ropevim
-* exuberant-ctags
-
-TODO
-----
-* build script
-
