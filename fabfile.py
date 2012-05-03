@@ -78,9 +78,14 @@ def disable(plugin_name):
         return
     os.unlink(pjoin(ENABLED_DIR, plugin_name))
 
-def install(plguin_name, update_manifest=True):
+def install(plugin_spec):
     """Install the plugin, update the manifest if update_manifest is True"""
-    pass
+    if plugin_spec.startswith('git://') or plugin_spec.startswith('https://'):
+        plugin_name = plugin_spec.split('/')[-1].split('.git')[0]
+        os.chdir(BUNDLE_DIR)
+        os.system('git clone %s' % plugin_spec)
+        os.chdir(CURRENT_DIR)
+        enable(plugin_name)
 
 def manifest():
     """Update the manifest file"""
@@ -94,7 +99,7 @@ def manifest_install(manifest_file=MANIFEST):
         plugins = json.load(f)
         for plugin in plugins:
             info("Installing %s..." % plugin['name'])
-            install(plugin['url'], update_manifest=False)
+            install(plugin['url'])
 
 def helptags():
     """Build help tags"""
