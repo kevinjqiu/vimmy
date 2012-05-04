@@ -189,6 +189,8 @@ if system("uname") =~ 'Darwin'
     nmap <C-f> :set invfu<CR>                " toggle fullscreen mode
 endif
 
+" redraw the screen
+nnoremap U :syntax sync fromstart<CR>:redraw!<CR>
 
 " TEMPORARY HACK
 source ~/.vim/enabled/_local/plugin/ctrlp.vim
