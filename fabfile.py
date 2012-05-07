@@ -10,6 +10,8 @@ from fabric.colors import yellow as _yellow
 # from fabric.context_managers import lcd
 # from fabric.api import local
 
+SNIPPETS_REPO = "git@github.com:kevinjqiu/snipmate-snippets.git"
+
 ALL = ('ALL', 'all', '*')
 PATHOGEN_URL = "https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
 
@@ -20,6 +22,7 @@ ENABLED_DIR = _abspath('vim/enabled')
 AUTOLOAD_DIR = _abspath('vim/autoload')
 CURRENT_DIR = _abspath('.')
 MANIFEST = _abspath('manifest.json')
+SNIPPETS_DIR = _abspath('vim/bundle/snipMate/snippets')
 
 DOT_VIM_DIR = _abspath(os.path.expanduser('~/.vim'))
 DOT_VIMRC = _abspath(os.path.expanduser('~/.vimrc'))
@@ -117,7 +120,7 @@ def manifest():
     """Update the manifest file"""
     plugins = _get_plugins_from_dir(ENABLED_DIR)
     with open(MANIFEST, 'w') as f:
-        json.dump(plugins, f, indent=4)
+        json.dump(plugins, f, indent=4, sort_keys=True)
     _info('%s is updated' % MANIFEST)
 
 def manifest_install(manifest_file=MANIFEST):
@@ -146,3 +149,10 @@ def bootstrap():
     manifest_install()
     enable('_local')
     helptags()
+
+def snippets():
+    """Install snippets for snipmate"""
+    if not _exists(_pjoin(CURRENT_DIR, 'snipmate-snippets')):
+        os.system('env GIT_SSL_NO_VERIFY=true git clone %s' % SNIPPETS_REPO)
+    os.chdir(_pjoin(CURRENT_DIR, 'snipmate-snippets'))
+    os.system('rake deploy_local')

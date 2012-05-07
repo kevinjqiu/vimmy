@@ -1,114 +1,122 @@
 [
     {
-        "url": "http://github.com/vim-scripts/ack.vim.git", 
-        "name": "ack.vim"
+        "name": "VimClojure", 
+        "url": "https://github.com/vim-scripts/VimClojure.git"
     }, 
     {
-        "url": "https://github.com/sjl/badwolf.git", 
-        "name": "badwolf"
+        "name": "vim-javascript", 
+        "url": "git://github.com/pangloss/vim-javascript.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/ctrlp.vim.git", 
-        "name": "ctrlp.vim"
+        "name": "SuperTab-continued.", 
+        "url": "https://github.com/vim-scripts/SuperTab-continued..git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/Jinja.git", 
-        "name": "Jinja"
+        "name": "vim-ruby", 
+        "url": "https://github.com/vim-ruby/vim-ruby.git"
     }, 
     {
-        "url": "https://github.com/scrooloose/nerdtree.git", 
-        "name": "nerdtree"
+        "name": "vim-twig", 
+        "url": "https://github.com/beyondwords/vim-twig.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/pyflakes.vim.git", 
-        "name": "pyflakes.vim"
+        "name": "pyflakes.vim", 
+        "url": "https://github.com/vim-scripts/pyflakes.vim.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/scala.vim.git", 
-        "name": "scala.vim"
+        "name": "vim-monokai", 
+        "url": "https://github.com/sickill/vim-monokai.git"
     }, 
     {
-        "url": "https://github.com/hukl/Smyck-Color-Scheme.git", 
-        "name": "Smyck-Color-Scheme"
+        "name": "snipMate", 
+        "url": "https://github.com/vim-scripts/snipMate.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/snipMate.git", 
-        "name": "snipMate"
+        "name": "spectrum.vim", 
+        "url": "git://github.com/kevinjqiu/spectrum.vim.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/Solarized.git", 
-        "name": "Solarized"
+        "name": "Solarized", 
+        "url": "https://github.com/vim-scripts/Solarized.git"
     }, 
     {
-        "url": "git://github.com/kevinjqiu/spectrum.vim.git", 
-        "name": "spectrum.vim"
+        "name": "vim-fugitive", 
+        "url": "https://github.com/tpope/vim-fugitive.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/SQLUtilities.git", 
-        "name": "SQLUtilities"
+        "name": "badwolf", 
+        "url": "https://github.com/sjl/badwolf.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/SuperTab-continued..git", 
-        "name": "SuperTab-continued."
+        "name": "SQLUtilities", 
+        "url": "https://github.com/vim-scripts/SQLUtilities.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/surround.vim.git", 
-        "name": "surround.vim"
+        "name": "vim-coffee-script", 
+        "url": "https://github.com/vim-scripts/vim-coffee-script.git"
     }, 
     {
-        "url": "https://github.com/majutsushi/tagbar.git", 
-        "name": "tagbar"
+        "name": "ack.vim", 
+        "url": "https://github.com/vim-scripts/ack.vim.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/tComment.git", 
-        "name": "tComment"
+        "name": "scala.vim", 
+        "url": "https://github.com/vim-scripts/scala.vim.git"
     }, 
     {
-        "url": "https://github.com/vim-scripts/vim-coffee-script.git", 
-        "name": "vim-coffee-script"
+        "name": "Gist.vim", 
+        "url": "https://github.com/vim-scripts/Gist.vim.git"
     }, 
     {
-        "url": "https://github.com/flazz/vim-colorschemes.git", 
-        "name": "vim-colorschemes"
+        "name": "Jinja", 
+        "url": "https://github.com/vim-scripts/Jinja.git"
     }, 
     {
-        "url": "https://github.com/Lokaltog/vim-easymotion.git", 
-        "name": "vim-easymotion"
+        "name": "Smyck-Color-Scheme", 
+        "url": "https://github.com/hukl/Smyck-Color-Scheme.git"
     }, 
     {
-        "url": "https://github.com/tpope/vim-fugitive.git", 
-        "name": "vim-fugitive"
+        "name": "tComment", 
+        "url": "https://github.com/vim-scripts/tComment.git"
     }, 
     {
-        "url": "git://github.com/pangloss/vim-javascript.git", 
-        "name": "vim-javascript"
+        "name": "vim-slime", 
+        "url": "https://github.com/kevinjqiu/vim-slime.git"
     }, 
     {
-        "url": "https://github.com/sickill/vim-monokai.git", 
-        "name": "vim-monokai"
+        "name": "ZoomWin", 
+        "url": "https://github.com/vim-scripts/ZoomWin.git"
     }, 
     {
-        "url": "https://github.com/Lokaltog/vim-powerline.git", 
-        "name": "vim-powerline"
+        "name": "vim-powerline", 
+        "url": "https://github.com/Lokaltog/vim-powerline.git"
     }, 
     {
-        "url": "https://github.com/vim-ruby/vim-ruby.git", 
-        "name": "vim-ruby"
+        "name": "tagbar", 
+        "url": "https://github.com/majutsushi/tagbar.git"
     }, 
     {
-        "url": "https://github.com/kevinjqiu/vim-slime.git", 
-        "name": "vim-slime"
+        "name": "taglist.vim", 
+        "url": "https://github.com/vim-scripts/taglist.vim.git"
     }, 
     {
-        "url": "https://github.com/beyondwords/vim-twig.git", 
-        "name": "vim-twig"
+        "name": "surround.vim", 
+        "url": "https://github.com/vim-scripts/surround.vim.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/VimClojure.git", 
-        "name": "VimClojure"
+        "name": "vim-easymotion", 
+        "url": "https://github.com/Lokaltog/vim-easymotion.git"
     }, 
     {
-        "url": "http://github.com/vim-scripts/ZoomWin.git", 
-        "name": "ZoomWin"
+        "name": "ctrlp.vim", 
+        "url": "https://github.com/vim-scripts/ctrlp.vim.git"
+    }, 
+    {
+        "name": "vim-colorschemes", 
+        "url": "https://github.com/flazz/vim-colorschemes.git"
+    }, 
+    {
+        "name": "nerdtree", 
+        "url": "https://github.com/scrooloose/nerdtree.git"
     }
 ]

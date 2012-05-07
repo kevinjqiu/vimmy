@@ -7,3 +7,4 @@ vim/enabled
 pathogen.vim
 vim/bundle/*
 !vim/bundle/_local
+snipmate-snippets/
