@@ -29,6 +29,10 @@ def _invoke_rake_task(task_name, *a)
   Rake::Task[task_name].invoke *a
 end
 
+def _git_clone(repo)
+  system("env GIT_SSL_NO_VERIFY=true git clone #{repo}")
+end
+
 def _plugins(dir_name)
   plugins = []
   Dir.foreach(dir_name) do |plugin_dir|
@@ -106,7 +110,7 @@ task :install, :plugin_spec do |t, args|
   if /^(git|https):\/\//.match args[:plugin_spec]
     plugin_name = args[:plugin_spec].split('/')[-1].split('.git')[0]
     Dir.chdir(PATHS[:bundle]) do
-      if system("git clone #{args[:plugin_spec]}")
+      if _git_clone(args[:plugin_spec])
         puts "#{plugin_name} was installed."
         _invoke_rake_task "enable", plugin_name
       else
