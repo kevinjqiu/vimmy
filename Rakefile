@@ -78,7 +78,7 @@ task :pathogen do
   unless File.exists? PATHS[:autoload]
     system "mkdir -p #{PATHS[:autoload]}"
   end
-  if system "curl -so #{PATHS[:pathogen]} #{PATHOGEN_URL}"
+  if system "curl -k -so #{PATHS[:pathogen]} #{PATHOGEN_URL}"
     puts "Pathogen is updated."
   end
 end
