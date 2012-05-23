@@ -142,9 +142,9 @@ task :symlinks do
   end
 
   File.symlink PATHS[:vimrc], PATHS[:dot_vimrc]
-  puts "Symlinked #{PATHS[:vimrc]} to #{PATHS[:dot_vimrc}"
+  puts "Symlinked #{PATHS[:vimrc]} to #{PATHS[:dot_vimrc]}"
   File.symlink PATHS[:vim], PATHS[:dot_vim]
-  puts "Symlinked #{PATHS[:vim]} to #{PATHS[:dot_vim}"
+  puts "Symlinked #{PATHS[:vim]} to #{PATHS[:dot_vim]}"
 end
 
 desc "Bootstrap my vim environment."
