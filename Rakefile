@@ -20,18 +20,26 @@ def _bool(val)
   ['true', 'yes', '1'].include? val.downcase
 end
 
+def _invoke_rake_task(task_name, *a)
+  Rake::Task[task_name].reenable
+  Rake::Task[task_name].invoke *a
+end
+
 def _plugins(dir_name)
   plugins = []
   Dir.foreach(dir_name) do |plugin_dir|
-    if (File.directory? plugin_dir) && (not BLACKLIST.include? plugin_dir)
-      plugin = {:name => plugin_dir}
-      Dir.chdir("#{dir_name}/#{plugin_dir}") do
-        unless File.exists? '.git'
-          _, url = *`git config -l | grep remote.origin.url`.split('=')
-          plugin[:url] = url
+    plugin_full_path = File.join(dir_name, plugin_dir)
+    if (File.directory? plugin_full_path) || (File.symlink? plugin_full_path)
+      unless BLACKLIST.include? plugin_dir
+        plugin = {:name => plugin_dir}
+        Dir.chdir("#{dir_name}/#{plugin_dir}") do
+          unless File.exists? '.git'
+            _, url = *`git config -l | grep remote.origin.url`.split('=')
+            plugin[:url] = url
+          end
         end
+        plugins.push(plugin)
       end
-      plugins.push(plugin)
     end
   end
   plugins
@@ -43,11 +51,12 @@ desc "List plugins.
 :param: detailed if True, print the detail so fthe plugin, or just the plugin name"
 task :list, :filter, :detailed do |t, args|
   args.with_defaults(
-    :filtered => :all,
+    :filter   => :all,
     :detailed => false
   )
 
-  path = (args[:filter] == :all && PATHS[:bundle]) || PATHS[:enabled]
+  path = (args[:filter].to_sym == :all && PATHS[:bundle]) || PATHS[:enabled]
+  puts path
   _plugins(path).each do |plugin|
     if args[:detailed]
       puts "#{plugin[:name]}\t#{plugin[:url]}"
@@ -60,9 +69,9 @@ end
 desc "Install pathogen."
 task :pathogen do
   unless File.exists? PATHS[:autoload]
-    system("mkdir -p #{PATHS[:autoload]}")
+    system "mkdir -p #{PATHS[:autoload]}"
   end
-  if system("curl -so #{PATHS[:pathogen]} #{PATHOGEN_URL}")
+  if system "curl -so #{PATHS[:pathogen]} #{PATHOGEN_URL}"
     puts "Pathogen is updated."
   end
 end
@@ -83,18 +92,27 @@ end
 
 desc "Install plugin."
 task :install, :plugin_spec do |t, args|
-  if /^git:\/\//.match args[:plugin_spec]
+  if /^(git|https):\/\//.match args[:plugin_spec]
     plugin_name = args[:plugin_spec].split('/')[-1].split('.git')[0]
     Dir.chdir(PATHS[:bundle]) do
       if system("git clone #{args[:plugin_spec]}")
         puts "#{plugin_name} was installed."
-        enable(plugin_name)
+        _invoke_rake_task "enable", plugin_name
       else
         puts "#{plugin_name} was not installed correctly."
       end
     end
   else
     puts "Non-git plugins not supported yet."
+  end
+end
+
+desc "Install plugins from manifest.yaml"
+task :manifest_install do
+  require 'yaml'
+  YAML.load(File.new('manifest.yaml')).each do |plugin|
+    puts "Installing #{plugin['name']}..."
+    _invoke_rake_task "install", plugin['url']
   end
 end
 
