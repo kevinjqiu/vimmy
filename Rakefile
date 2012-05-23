@@ -33,6 +33,7 @@ def _plugins(dir_name)
       unless BLACKLIST.include? plugin_dir
         plugin = {:name => plugin_dir}
         Dir.chdir("#{dir_name}/#{plugin_dir}") do
+          plugin[:url] = url
           unless File.exists? '.git'
             _, url = *`git config -l | grep remote.origin.url`.split('=')
             plugin[:url] = url
@@ -58,7 +59,7 @@ task :list, :filter, :detailed do |t, args|
   path = (args[:filter].to_sym == :all && PATHS[:bundle]) || PATHS[:enabled]
   puts path
   _plugins(path).each do |plugin|
-    if args[:detailed]
+    if _bool(args[:detailed])
       puts "#{plugin[:name]}\t#{plugin[:url]}"
     else
       puts "#{plugin[:name]}"
@@ -87,7 +88,15 @@ task :enable, :plugin_name do |t, args|
     puts "#{args[:plugin_name]} is not installed."
   end
 
-  `ln -s #{plugin_install_path} #{plugin_enabled_path}`
+  File.symlink plugin_install_path, plugin_enabled_path
+  puts "Enabled #{args[:plugin_name]}."
+end
+
+desc "Disable plugin."
+task :disable, :plugin_name do |t, args|
+  plugin_enabled_path = File.join(PATHS[:enabled], args[:plugin_name])
+  File.unlink plugin_enabled_path
+  puts "Disabled #{args[:plugin_name]}."
 end
 
 desc "Install plugin."
