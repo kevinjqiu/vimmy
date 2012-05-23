@@ -17,7 +17,11 @@ PATHS = {
 BLACKLIST = ['.', '..', '_local']
 
 def _bool(val)
-  ['true', 'yes', '1'].include? val.downcase
+  if !!val == val
+    return val
+  else
+    ['true', 'yes', '1'].include? val.downcase
+  end
 end
 
 def _invoke_rake_task(task_name, *a)
@@ -33,8 +37,7 @@ def _plugins(dir_name)
       unless BLACKLIST.include? plugin_dir
         plugin = {:name => plugin_dir}
         Dir.chdir("#{dir_name}/#{plugin_dir}") do
-          plugin[:url] = url
-          unless File.exists? '.git'
+          if File.exists? '.git'
             _, url = *`git config -l | grep remote.origin.url`.split('=')
             plugin[:url] = url
           end
@@ -57,7 +60,6 @@ task :list, :filter, :detailed do |t, args|
   )
 
   path = (args[:filter].to_sym == :all && PATHS[:bundle]) || PATHS[:enabled]
-  puts path
   _plugins(path).each do |plugin|
     if _bool(args[:detailed])
       puts "#{plugin[:name]}\t#{plugin[:url]}"
