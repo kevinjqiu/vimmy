@@ -127,6 +127,26 @@ task :manifest_install do
   end
 end
 
+desc "Symlinks"
+task :symlinks do
+  require 'fileutils'
+
+  if File.exists? PATHS[:dot_vim]
+    FileUtils.mv PATHS[:dot_vim], File.expand_path('~/.vim')
+    puts "Backup #{PATHS[:dot_vim]} to ~/.vim.bak"
+  end
+
+  if File.exists? PATHS[:dot_vimrc]
+    FileUtils.mv PATHS[:dot_vimrc], File.expand_path('~/.vimrc.bak')
+    puts "Backup #{PATHS[:dot_vimrc]} to ~/.vimrc.bak"
+  end
+
+  File.symlink PATHS[:vimrc], PATHS[:dot_vimrc]
+  puts "Symlinked #{PATHS[:vimrc]} to #{PATHS[:dot_vimrc}"
+  File.symlink PATHS[:vim], PATHS[:dot_vim]
+  puts "Symlinked #{PATHS[:vim]} to #{PATHS[:dot_vim}"
+end
+
 desc "Bootstrap my vim environment."
-task :bootstrap => :pathogen do
+task :bootstrap => [:pathogen, :manifest_install, :symlinks] do
 end
