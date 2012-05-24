@@ -2,8 +2,7 @@ Build Instruction
 =================
 
 * Dependencies:
-  - python2.6+
-  - fabric
+  - rake
 
 * Checkout vimmy
 
@@ -16,7 +15,7 @@ git clone git://github.com/kevinjqiu/vimmy.git
 Under ``vimmy`` folder:
 
 ```bash
-fab bootstrap
+rake bootstrap
 ```
 
 TODO
