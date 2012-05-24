@@ -8,8 +8,7 @@ PATHS = {
   :bundle    => File.expand_path('vim/bundle'),
   :enabled   => File.expand_path('vim/enabled'),
   :current   => File.expand_path('.'),
-  :manifest  => File.expand_path('manifest.json'),
-  :snippets  => File.expand_path('vim/bundle/snipMate/snippets'),
+  :manifest  => File.expand_path('manifest.yaml'),
   :dot_vim   => File.expand_path('~/.vim'),
   :dot_vimrc => File.expand_path('~/.vimrc')
 }
@@ -148,7 +147,7 @@ end
 desc "Install plugins from manifest.yaml"
 task :manifest_install do
   require 'yaml'
-  YAML.load(File.new('manifest.yaml')).each do |plugin|
+  YAML.load(File.new(PATHS[:manifest])).each do |plugin|
     puts "Installing #{plugin['name']}..."
     _invoke_rake_task "install", plugin['url']
   end
