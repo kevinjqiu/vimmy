@@ -32,7 +32,7 @@ post_install "ropevim" do
   `sudo pip install ropevim`
 end
 
-BLACKLIST = ['.', '..', '_local']
+BLACKLIST = ['.', '..', '_local', 'KEEPME']
 
 def _bool(val)
   if !!val == val
@@ -135,6 +135,7 @@ task :install, :plugin_spec do |t, args|
         if post_install
           puts 'Triggering post-install hook...'
           post_install.call
+        end
       else
         puts "#{plugin_name} was not installed correctly."
       end
@@ -175,7 +176,13 @@ end
 
 desc "Build helptags"
 task :helptags do
-  system "vim +\"helptags #{PATHS[:enabled]}\" +qall"
+  Dir.foreach(PATHS[:enabled]) do |plugin_name|
+    unless BLACKLIST.include? plugin_name
+      puts "Building helptags for #{plugin_name}..."
+      path = File.join(PATHS[:enabled], plugin_name)
+      system "vim +\"helptags #{path}\" +qall"
+    end
+  end
 end
 
 desc "Bootstrap my vim environment."
