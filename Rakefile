@@ -151,7 +151,12 @@ task :symlinks do
   puts "Symlinked #{PATHS[:vim]} to #{PATHS[:dot_vim]}"
 end
 
+desc "Build helptags"
+task :helptags do
+  system "vim +\"helptags #{PATHS[:enabled]}\" +qall"
+end
+
 desc "Bootstrap my vim environment."
-task :bootstrap => [:pathogen, :manifest_install, :symlinks] do
+task :bootstrap => [:pathogen, :manifest_install, :symlinks, :helptags] do
   _invoke_rake_task "enable", "_local"
 end
