@@ -14,6 +14,25 @@ PATHS = {
   :dot_vimrc => File.expand_path('~/.vimrc')
 }
 
+POST_INSTALL_HOOKS = {}
+
+def post_install(plugin_name, &exec)
+  POST_INSTALL_HOOKS[plugin_name] = exec
+end
+
+post_install "pyflakes" do
+  `sudo pip install pyflakes`
+end
+
+post_install "tagbar" do
+  `sudo pip install python-ctags`
+  `sudo apt-get install exuberant-ctags`
+end
+
+post_install "ropevim" do
+  `sudo pip install ropevim`
+end
+
 BLACKLIST = ['.', '..', '_local']
 
 def _bool(val)
@@ -113,6 +132,10 @@ task :install, :plugin_spec do |t, args|
       if _git_clone(args[:plugin_spec])
         puts "#{plugin_name} was installed."
         _invoke_rake_task "enable", plugin_name
+        post_install = POST_INSTALL_HOOKS[plugin_name]
+        if post_install
+          puts 'Triggering post-install hook...'
+          post_install.call
       else
         puts "#{plugin_name} was not installed correctly."
       end
