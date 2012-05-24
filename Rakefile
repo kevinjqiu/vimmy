@@ -153,4 +153,5 @@ end
 
 desc "Bootstrap my vim environment."
 task :bootstrap => [:pathogen, :manifest_install, :symlinks] do
+  _invoke_rake_task "enable", "_local"
 end
