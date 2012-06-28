@@ -19,17 +19,20 @@ def post_install(plugin_name, &exec)
   POST_INSTALL_HOOKS[plugin_name] = exec
 end
 
-post_install "pyflakes" do
-  `sudo pip install pyflakes`
+post_install "pyflakes.vim" do
+  # `sudo pip install pyflakes`
+  puts "!! pyflakes.vim requires. !!"
 end
-
+ 
 post_install "tagbar" do
-  `sudo pip install python-ctags`
-  `sudo apt-get install exuberant-ctags`
+  # `sudo pip install python-ctags`
+  # `sudo apt-get install exuberant-ctags`
+  puts "!! tagbar requires python-ctags and exuberant-ctags. !!"
 end
 
 post_install "ropevim" do
-  `sudo pip install ropevim`
+  # `sudo pip install ropevim`
+  puts "!! ropevim requires ropevim. !!"
 end
 
 BLACKLIST = ['.', '..', '_local', 'KEEPME']
