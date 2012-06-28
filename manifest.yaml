@@ -22,7 +22,7 @@
 - name: vim-fugitive
   url: git://github.com/tpope/vim-fugitive.git
 - name: badwolf
-  url: git://github.com/sjl/badwolf.git
+  url: git://github.com/kevinjqiu/badwolf.git
 - name: SQLUtilities
   url: git://github.com/vim-scripts/SQLUtilities.git
 - name: vim-coffee-script
