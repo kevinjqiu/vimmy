@@ -1,7 +1,11 @@
 #! /usr/bin/env sh
 
-# TODO allow customized ENDPATH via cmdarg
-ENDPATH="$HOME/vimmy"
+if [ $# -eq 1 ]; then
+    ENDPATH=$1
+else
+    ENDPATH="$HOME/vimmy"
+fi
+
 REPO_URL="http://github.com/kevinjqiu/vimmy.git"
 
 TODAY=`date +%Y%m%d`
