@@ -1,5 +1,6 @@
 #! /usr/bin/env sh
 
+# TODO allow customized ENDPATH via cmdarg
 ENDPATH="$HOME/vimmy"
 REPO_URL="http://github.com/kevinjqiu/vimmy.git"
 
@@ -18,6 +19,7 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do
     [ -e $i ] && mv $i $i.$TODAY
 done
 
+# TODO remove the branch once it's merged
 git clone --recursive -b vundle $REPO_URL $ENDPATH
 mkdir -p $ENDPATH/.vim/bundle
 ln -s $ENDPATH/vimrc $HOME/.vimrc
