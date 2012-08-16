@@ -58,4 +58,4 @@ Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'tpope/vim-rails'
 
 " Misc
-Bundle 'vim-markdown'
+Bundle 'tpope/vim-markdown'
