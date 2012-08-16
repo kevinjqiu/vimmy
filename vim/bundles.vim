@@ -17,6 +17,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/csapprox'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'corntrace/bufexplorer'
+Bundle 'kevinjqiu/badwolf.git'
 
 "General Programming
 Bundle 'scrooloose/syntastic'
