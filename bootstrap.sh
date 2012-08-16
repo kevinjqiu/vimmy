@@ -20,8 +20,8 @@ done
 
 git clone --recursive $REPO_URL $ENDPATH
 mkdir -p $ENDPATH/.vim/bundle
-ln -s $ENDPATH/.vimrc $HOME/.vimrc
-ln -s $ENDPATH/.vim $HOME/.vim
+ln -s $ENDPATH/vimrc $HOME/.vimrc
+ln -s $ENDPATH/vim $HOME/.vim
 
 git clone http://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 
