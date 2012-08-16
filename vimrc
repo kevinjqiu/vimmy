@@ -197,7 +197,7 @@ endif
 nnoremap U :syntax sync fromstart<CR>:redraw!<CR>
 
 " TEMPORARY HACK
-source ~/.vim/enabled/_local/plugin/ctrlp.vim
+source ~/.vim/bundle/_local/plugin/ctrlp.vim
 
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
