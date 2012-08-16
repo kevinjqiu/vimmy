@@ -1,4 +1,4 @@
-" vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
 set nocompatible
 " Setup vundle
 set rtp+=$HOME/.vim/bundle/vundle
@@ -197,7 +197,7 @@ endif
 nnoremap U :syntax sync fromstart<CR>:redraw!<CR>
 
 " TEMPORARY HACK
-source ~/.vim/bundle/_local/plugin/ctrlp.vim
+source ~/.vim/_local/plugin/ctrlp.vim
 
 " overwrite with local settings if .vimrc.local exists
 if filereadable(expand("~/.vimrc.local"))
