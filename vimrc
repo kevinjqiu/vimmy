@@ -48,8 +48,6 @@ if has("gui_running")
     set t_Co=256
     colorscheme molokai 
     set cursorline " cursor line only when in GUI mode
-else
-    colorscheme wombat256mod
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

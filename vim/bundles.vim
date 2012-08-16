@@ -16,7 +16,6 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/csapprox'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'flazz/vim-colorschemes'
 Bundle 'corntrace/bufexplorer'
 
 "General Programming
