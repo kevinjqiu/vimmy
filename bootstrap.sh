@@ -19,8 +19,7 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do
     [ -e $i ] && mv $i $i.$TODAY
 done
 
-# TODO remove the branch once it's merged
-git clone --recursive -b vundle $REPO_URL $ENDPATH
+git clone --recursive $REPO_URL $ENDPATH
 mkdir -p $ENDPATH/.vim/bundle
 ln -s $ENDPATH/vimrc $HOME/.vimrc
 ln -s $ENDPATH/vim $HOME/.vim
