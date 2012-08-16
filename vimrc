@@ -139,6 +139,14 @@
 
     " redraw the screen
     nnoremap U :syntax sync fromstart<CR>:redraw!<CR>
+
+    " visual shifting
+    vnoremap < <gv
+    vnoremap > >gv
+
+    " sudo!!
+    cmap w!! w !sudo tee % > /dev/null
+
 " }
 
 " Typo autofixes {
