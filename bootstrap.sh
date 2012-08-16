@@ -4,15 +4,6 @@
 ENDPATH="$HOME/vimmy"
 REPO_URL="http://github.com/kevinjqiu/vimmy.git"
 
-warn() {
-    echo "$1" >&2
-}
-
-die() {
-    warn "$1"
-    exit 1
-}
-
 TODAY=`date +%Y%m%d`
 
 for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do
