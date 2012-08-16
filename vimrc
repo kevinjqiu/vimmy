@@ -1,6 +1,10 @@
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
 set nocompatible
-" Vundle needs to be sourced first 
-call pathogen#infect('enabled')
+" Setup vundle
+set rtp+=$HOME/.vim/bundle/vundle
+call vundle#rc()
+
+source $HOME/.vim/bundles.vim
 
 set ruler
 " keep cusion space when scrolling up/down
