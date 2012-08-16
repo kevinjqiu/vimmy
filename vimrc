@@ -7,10 +7,10 @@
     "
     " Vundle {
         set rtp+=$HOME/.vim/bundle/vundle
-        set rtp+=$HOME/.vim/_local
+        set rtp+=$HOME/.vim/conf/_local
         call vundle#rc()
 
-        source $HOME/.vim/bundles.vim
+        source $HOME/.vim/conf/bundles.vim
     " }
     "
     " UI {
