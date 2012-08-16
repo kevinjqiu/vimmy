@@ -18,6 +18,7 @@ Bundle 'godlygeek/csapprox'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'corntrace/bufexplorer'
 Bundle 'kevinjqiu/badwolf.git'
+Bundle 'ZoomWin'
 
 "General Programming
 Bundle 'scrooloose/syntastic'

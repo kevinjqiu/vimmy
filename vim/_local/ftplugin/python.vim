@@ -2,7 +2,7 @@
 " Section: RopeVim config {{{1
 "
 " source /usr/share/vim/plugin/ropevim.vim
-source /usr/local/ropevim.vim
+" source /usr/local/ropevim.vim
 let ropevim_codeassist_maxfiexes=10
 let ropevim_guess_project=1
 let ropevim_vim_completion=1
