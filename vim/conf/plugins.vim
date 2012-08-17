@@ -40,4 +40,9 @@
     " PIV {
         let g:DisableAutoPHPFolding = 1
     " }
+    "
+    " syntastic {
+        let g:syntastic_mode_map = { 'passive_filetypes':['php'] }
+    " }
+    "
 " }
