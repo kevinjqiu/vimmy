@@ -42,7 +42,7 @@
     " }
     "
     " syntastic {
-        let g:syntastic_mode_map = { 'passive_filetypes':['php'] }
+        let g:syntastic_mode_map = { 'model' : 'passive' }
     " }
     "
 " }
