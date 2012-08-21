@@ -60,3 +60,4 @@ Bundle 'tpope/vim-rails'
 
 " Misc
 Bundle 'tpope/vim-markdown'
+Bundle 'vimux'
