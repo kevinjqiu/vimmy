@@ -23,11 +23,11 @@ Bundle 'ZoomWin'
 "General Programming
 Bundle 'scrooloose/syntastic'
 Bundle 'garbas/vim-snipmate'
-"Bundle 'spf13/snipmate-snippets'
+Bundle 'kevinjqiu/snipmate-snippets'
 " Source support_function.vim to support snipmate-snippets.
-"if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
-"    source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
-"endif
+if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
+    source ~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim
+endif
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
