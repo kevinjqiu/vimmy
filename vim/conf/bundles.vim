@@ -5,8 +5,7 @@ Bundle 'mileszs/ack.vim'
 
 " General
 Bundle 'scrooloose/nerdtree'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'spf13/vim-colors'
+Bundle 'kevinjqiu/vim-colors'
 Bundle 'tpope/vim-surround'
 Bundle 'AutoClose'
 Bundle 'kien/ctrlp.vim'
@@ -17,7 +16,6 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/csapprox'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'corntrace/bufexplorer'
-Bundle 'kevinjqiu/badwolf.git'
 Bundle 'ZoomWin'
 
 "General Programming

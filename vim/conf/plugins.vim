@@ -1,4 +1,8 @@
 " Plugin config {
+    " solarized {
+        let g:solarized_termcolors=256
+        let g:solarized_termtrans=1
+    " }"
     " Ack.vim {
         map <LEADER>f :Ack 
     " }
