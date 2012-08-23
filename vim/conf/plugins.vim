@@ -49,4 +49,14 @@
         let g:syntastic_mode_map = { 'mode' : 'passive' }
     " }
     "
+    " Vimux {
+        " Prompt for a command to run
+        map <Leader>xp :VimuxPromptCommand<CR>
+
+        " If text is selected, save it in the v buffer and send that buffer it to tmux
+        vmap <Leader>xx "vy :call VimuxRunCommand(@v . "\n", 0)<CR>
+
+        " Select current paragraph and send it to tmux
+        nmap <Leader>xx vip<Leader>vs<CR>
+    " }
 " }
