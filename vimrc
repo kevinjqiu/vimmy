@@ -19,7 +19,9 @@
         set showcmd
         set ttyfast
         " only available in 7.3
-        set relativenumber  
+        if version >= 703
+            set relativenumber
+        endif
         set showmatch " briefly jump to the matching bracket
         set listchars=tab:▸\ ,eol:¬ 
 
