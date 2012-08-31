@@ -57,6 +57,6 @@
         vmap <Leader>xx "vy :call VimuxRunCommand(@v . "\n", 0)<CR>
 
         " Select current paragraph and send it to tmux
-        nmap <Leader>xx vip<Leader>vs<CR>
+        nmap <Leader>xx vap<Leader>vs<CR>
     " }
 " }
