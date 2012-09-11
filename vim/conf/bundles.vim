@@ -17,6 +17,8 @@ Bundle 'godlygeek/csapprox'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'corntrace/bufexplorer'
 Bundle 'ZoomWin'
+Bundle 'Gist.vim'
+Bundle 'WebAPI.vim'
 
 "General Programming
 Bundle 'scrooloose/syntastic'
