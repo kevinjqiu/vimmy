@@ -21,4 +21,4 @@ ln -s $ENDPATH/vim $HOME/.vim
 
 git clone http://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 
-vim +BundleInstall! +BundleClean +q
+vim +BundleInstall! +BundleClean +qall
