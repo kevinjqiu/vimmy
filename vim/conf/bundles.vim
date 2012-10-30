@@ -58,6 +58,9 @@ Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 " Ruby
 Bundle 'tpope/vim-rails'
 
+" Clojure
+Bundle "VimClojure"
+
 " Misc
 Bundle 'tpope/vim-markdown'
 Bundle 'vimux'
