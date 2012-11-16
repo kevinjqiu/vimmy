@@ -22,7 +22,7 @@ Bundle 'WebAPI.vim'
 
 "General Programming
 Bundle 'scrooloose/syntastic'
-Bundle 'garbas/vim-snipmate'
+Bundle 'kevinjqiu/vim-snipmate'
 Bundle 'kevinjqiu/snipmate-snippets'
 " Source support_function.vim to support snipmate-snippets.
 if filereadable(expand("~/.vim/bundle/snipmate-snippets/snippets/support_functions.vim"))
