@@ -7,12 +7,12 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kevinjqiu/vim-colors'
 Bundle 'tpope/vim-surround'
-Bundle 'AutoClose'
+" Bundle 'AutoClose'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/sessionman.vim'
 Bundle 'matchit.zip'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/csapprox'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'corntrace/bufexplorer'
@@ -31,7 +31,7 @@ endif
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'godlygeek/tabular'
+" Bundle 'godlygeek/tabular'
 if executable('ctags')
     Bundle 'majutsushi/tagbar'
 endif
