@@ -56,7 +56,7 @@ Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 
 " Ruby
-Bundle 'tpope/vim-rails'
+" Bundle 'tpope/vim-rails'
 
 " Clojure
 Bundle "VimClojure"
