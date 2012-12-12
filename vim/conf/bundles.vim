@@ -63,4 +63,4 @@ Bundle "VimClojure"
 
 " Misc
 Bundle 'tpope/vim-markdown'
-Bundle 'vimux'
+Bundle 'kevinjqiu/vimux'
