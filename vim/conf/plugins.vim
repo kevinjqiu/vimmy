@@ -59,4 +59,7 @@
         " Select current paragraph and send it to tmux
         nmap <Leader>xx vap<Leader>vs<CR>
     " }
+    " PyMode {
+        let g:pymode_doc = 0
+    " }
 " }
