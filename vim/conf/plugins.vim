@@ -47,6 +47,7 @@
     "
     " syntastic {
         let g:syntastic_mode_map = { 'mode' : 'passive' }
+        let g:syntastic_auto_loc_list=0
     " }
     "
     " Vimux {
@@ -60,6 +61,7 @@
         nmap <Leader>xx vap<Leader>vs<CR>
     " }
     " PyMode {
-        let g:pymode_doc = 0
+        let g:pymode_doc=0
+        let pymode_rope_extended_complete=0
     " }
 " }
