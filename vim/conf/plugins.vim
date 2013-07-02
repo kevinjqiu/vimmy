@@ -65,3 +65,5 @@
         let pymode_rope_extended_complete=0
     " }
 " }
+
+let g:syntastic_python_checker='flake8'

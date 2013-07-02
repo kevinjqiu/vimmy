@@ -71,7 +71,7 @@
     set shiftwidth=4
     set softtabstop=4
     set expandtab
-    set backspace=indent,eol,start " Allow backspacing over everything in insert mode
+    set backspace=indent,eol,start  | " Allow backspacing over everything in insert mode
 " }
 
 " Searching {
@@ -127,8 +127,7 @@
     nnoremap <C-j> <C-w>j
     nnoremap <C-k> <C-w>k
 
-    " toggle show whitespace
-    nmap <Leader>w :set list!<CR>
+    nmap <Leader>w :set list!<CR>   |" toggle show whitespace
 
     " the shift key is a bit sticky on Mac...
     map :W :w
