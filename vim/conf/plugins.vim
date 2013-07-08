@@ -28,7 +28,11 @@
             \ }
     " }
     " powerline.vim {
-        let g:Powerline_symbols = 'unicode'
+    "   let g:Powerline_symbols = 'unicode'
+    " }
+    " airline.vim {
+        let g:airline_enable_fugitive = 1
+        let g:airline_enable_syntastic = 1
     " }
     " ZoomWin.vim {
         map <Leader>z :ZoomWin<CR>
