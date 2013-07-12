@@ -7,7 +7,7 @@
         map <LEADER>f :Ack 
     " }
     " vim-gitgrep {
-        map <LEADER>F :GitGrep
+        map <LEADER>F :GitGrep 
     " }
     " nerdtree {
         let NERDTreeIgnore=['\.pyc$']
