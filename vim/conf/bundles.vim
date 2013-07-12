@@ -2,6 +2,7 @@ Bundle 'gmarik/vundle'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'aghareza/vim-gitgrep'
 
 " General
 Bundle 'scrooloose/nerdtree'

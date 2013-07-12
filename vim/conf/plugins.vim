@@ -6,6 +6,9 @@
     " Ack.vim {
         map <LEADER>f :Ack 
     " }
+    " vim-gitgrep {
+        map <LEADER>F :GitGrep
+    " }
     " nerdtree {
         let NERDTreeIgnore=['\.pyc$']
         nmap <F2> <Esc>:NERDTreeToggle<CR>
