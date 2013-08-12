@@ -34,7 +34,7 @@
     "   let g:Powerline_symbols = 'unicode'
     " }
     " airline.vim {
-        let g:airline_enable_fugitive = 1
+        let g:airline_enable_branch = 1
         let g:airline_enable_syntastic = 1
     " }
     " ZoomWin.vim {

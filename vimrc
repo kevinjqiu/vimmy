@@ -60,8 +60,8 @@
 
     set encoding=utf-8
     set ff=unix
-    set backupdir=~/.vim/backup
-    set directory=~/.vim/backup
+    set backupdir=/tmp
+    set directory=/tmp
 " }
 
 " Whitespace {
