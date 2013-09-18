@@ -10,3 +10,4 @@ vim/bundle/*
 snipmate-snippets/
 .SyncID
 .SyncIgnore
+vim/sessions/
