@@ -41,6 +41,7 @@ Bundle 'Shougo/neocomplcache'
 
 " PHP
 Bundle 'spf13/PIV'
+Bundle 'joonty/vdebug'
 
 " Python
 Bundle 'klen/python-mode'
