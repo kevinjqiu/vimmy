@@ -60,8 +60,8 @@
 
     set encoding=utf-8
     set ff=unix
-    set backupdir=/tmp
-    set directory=/tmp
+    set nobackup
+    set noswapfile
 " }
 
 " Whitespace {
