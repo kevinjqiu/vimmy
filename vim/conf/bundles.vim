@@ -57,6 +57,7 @@ Bundle 'taxilian/vim-web-indent'
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+Bundle 'Handlebars'
 
 " Ruby
 " Bundle 'tpope/vim-rails'
@@ -69,3 +70,4 @@ Bundle "VimClojure"
 Bundle 'tpope/vim-markdown'
 Bundle 'kevinjqiu/vimux'
 Bundle 'fatih/vim-go'
+Bundle 'kchmck/vim-coffee-script'
