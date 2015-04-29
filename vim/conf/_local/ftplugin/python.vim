@@ -9,10 +9,9 @@ let g:pymode_rope_completion=1
 let g:pymode_rope_complete_on_dot=0
 let g:pymode_rope_goto_definition_bind = "<C-]>"
 let g:pymode_rope_codeassist_maxfiexes=10
-" let g:pymode_rope_enable_autoimport=1
+let g:pymode_rope_goto_definition_bind='<Leader>gd'
+let g:pymode_rope_autoimport = 1
 
-nmap <Leader>gd :RopeGotoDefinition<CR>
-nmap <Leader>gD :let ropevim_goto_def_newwin=1<CR>:RopeGotoDefinition<CR>:let ropevim_goto_def_newwin=0<CR>
 nmap <Leader>gf :RopeFindOccurrences<CR>
 nmap <Leader>ai :PymodeRopeAutoImport<CR>
 " 1}}}
