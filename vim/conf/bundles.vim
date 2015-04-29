@@ -45,9 +45,7 @@ Bundle 'joonty/vdebug'
 
 " Python
 Bundle 'klen/python-mode'
-Bundle 'python.vim'
 Bundle 'python_match.vim'
-Bundle 'pythoncomplete'
 
 " Javascript
 Bundle 'leshill/vim-json'
