@@ -66,6 +66,7 @@ Bundle "VimClojure"
 
 " Misc
 Bundle 'tpope/vim-markdown'
+Bundle 'shime/vim-livedown'
 Bundle 'kevinjqiu/vimux'
 Bundle 'fatih/vim-go'
 Bundle 'kchmck/vim-coffee-script'
