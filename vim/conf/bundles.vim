@@ -64,6 +64,9 @@ Bundle 'Puppet-Syntax-Highlighting'
 " Clojure
 Bundle "VimClojure"
 
+" Rust
+Plugin 'rust-lang/rust.vim'
+
 " Misc
 Bundle 'tpope/vim-markdown'
 Bundle 'shime/vim-livedown'
