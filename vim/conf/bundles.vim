@@ -18,7 +18,6 @@ Bundle 'godlygeek/csapprox'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'corntrace/bufexplorer'
 Bundle 'ZoomWin'
-Bundle 'Gist.vim'
 Bundle 'WebAPI.vim'
 
 "General Programming
@@ -64,7 +63,6 @@ Plugin 'rust-lang/rust.vim'
 
 " Misc
 Bundle 'tpope/vim-markdown'
-Bundle 'shime/vim-livedown'
 Bundle 'kevinjqiu/vimux'
 Bundle 'fatih/vim-go'
 Bundle 'kchmck/vim-coffee-script'
