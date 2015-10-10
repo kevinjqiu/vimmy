@@ -7,6 +7,7 @@ Bundle 'aghareza/vim-gitgrep'
 " General
 Bundle 'scrooloose/nerdtree'
 Bundle 'kevinjqiu/vim-colors'
+Bundle 'romainl/Apprentice'
 Bundle 'tpope/vim-surround'
 " Bundle 'AutoClose'
 Bundle 'kien/ctrlp.vim'
