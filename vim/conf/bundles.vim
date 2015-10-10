@@ -13,9 +13,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/sessionman.vim'
 Bundle 'matchit.zip'
-" Bundle 'Lokaltog/vim-powerline'
 Bundle 'bling/vim-airline'
-" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/csapprox'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'corntrace/bufexplorer'
@@ -39,10 +37,6 @@ if executable('ctags')
     Bundle 'majutsushi/tagbar'
 endif
 Bundle 'Shougo/neocomplcache'
-
-" PHP
-Bundle 'spf13/PIV'
-Bundle 'joonty/vdebug'
 
 " Python
 Bundle 'klen/python-mode'
