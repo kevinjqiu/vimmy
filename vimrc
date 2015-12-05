@@ -5,12 +5,12 @@ if has('vim_starting')
     set nocompatible
   endif
 
-  set runtimepath+=$HOME/.nvim/bundle/neobundle.vim/
+  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
 filetype plugin indent on
 
-for file in split(glob("$HOME/.nvim/*.vim"), '\n')
+for file in split(glob("$HOME/.vim/*.vim"), '\n')
 	exec 'source' file
 endfor
 

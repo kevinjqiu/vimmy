@@ -1,7 +1,7 @@
 DOT_VIMRC_FULLPATH := $(HOME)/.vimrc
 DOT_VIM_FULLPATH := $(HOME)/.vim
 
-bootstrap: $(DOT_VIM_FULLPATH)/bundle/neobundle.vim
+bootstrap:
 	git clone https://github.com/Shougo/neobundle.vim "$(DOT_VIM_FULLPATH)/bundle/neobundle.vim"
 
 link: $(DOT_VIMRC_FULLPATH) $(DOT_VIM_FULLPATH)
