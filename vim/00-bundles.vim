@@ -1,4 +1,4 @@
-call neobundle#begin(expand('$HOME/.nvim/bundle'))
+call neobundle#begin(expand('$HOME/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
