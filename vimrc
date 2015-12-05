@@ -1,5 +1,7 @@
 " vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
 
+
+" Load neobundle and plugin config {
 if has('vim_starting')
   if &compatible
     set nocompatible
@@ -8,18 +10,16 @@ if has('vim_starting')
   set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
-filetype plugin indent on
-
 for file in split(glob("$HOME/.vim/*.vim"), '\n')
 	exec 'source' file
 endfor
-
-set cursorline " highlight the current line
+" }
 
 " General {
     syntax on
     filetype plugin indent on
 
+    set cursorline " highlight the current line
     set encoding=utf-8
     set ff=unix
     set nobackup
