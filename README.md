@@ -27,8 +27,3 @@ Bootstrap:
 Make symbolic links:
 
     make link
-
-TODO
-====
-
-* Fix neosnippet configuration 
