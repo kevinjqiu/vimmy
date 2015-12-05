@@ -1,0 +1,13 @@
+syntax: glob
+*.log
+vim/backup/*.sw[p,o]
+.netrwhist
+vim/enabled
+*.pyc
+pathogen.vim
+vim/bundle/*
+!vim/bundle/_local
+snipmate-snippets/
+.SyncID
+.SyncIgnore
+vim/sessions/
