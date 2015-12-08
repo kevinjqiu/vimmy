@@ -18,6 +18,11 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Valloric/YouCompleteMe', {
+            \ 'build'      : {
+            \     'unix'    : './install.py',
+            \     }
+            \ }
 
 " Color
 NeoBundle 'flazz/vim-colorschemes'
