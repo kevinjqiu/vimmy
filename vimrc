@@ -25,6 +25,7 @@ endfor
     set nobackup
     set noswapfile
     set background=dark
+    set relativenumber
 " }
 
 " Whitespace {
