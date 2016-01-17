@@ -18,12 +18,12 @@ Clone this repo:
 
     git clone git@github.com:kevinjqiu/vimmy.git
 
-Bootstrap:
-
-    cd vimmy
-    make bootstrap
-
 
 Make symbolic links:
-
+    cd vimmy
     make link
+
+
+Bootstrap:
+
+    make bootstrap
