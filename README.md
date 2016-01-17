@@ -20,6 +20,7 @@ Clone this repo:
 
 
 Make symbolic links:
+
     cd vimmy
     make link
 
