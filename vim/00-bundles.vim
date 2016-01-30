@@ -16,7 +16,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 			\ }
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Valloric/YouCompleteMe', {
             \ 'build'      : {
