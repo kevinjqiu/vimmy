@@ -19,11 +19,11 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Valloric/YouCompleteMe', {
-            \ 'build'      : {
-            \     'unix'    : './install.py',
-            \     }
-            \ }
+"NeoBundle 'Valloric/YouCompleteMe', {
+"            \ 'build'      : {
+"            \     'unix'    : './install.py',
+"            \     }
+"            \ }
 
 " Color
 NeoBundle 'flazz/vim-colorschemes'
