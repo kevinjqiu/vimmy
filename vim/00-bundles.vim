@@ -24,6 +24,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 "            \     'unix'    : './install.py',
 "            \     }
 "            \ }
+NeoBundle 'hashivim/vim-terraform'
 
 " Color
 NeoBundle 'flazz/vim-colorschemes'
