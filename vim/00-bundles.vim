@@ -41,6 +41,9 @@ NeoBundle 'pangloss/vim-javascript'
 " Ruby
 NeoBundle 'vim-ruby/vim-ruby'
 
+" Rust
+NeoBundle 'rust-lang/rust.vim'
+
 call neobundle#end()
 
 NeoBundleCheck
