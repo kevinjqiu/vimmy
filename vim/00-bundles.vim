@@ -41,6 +41,8 @@ NeoBundle 'vim-ruby/vim-ruby'
 " Rust
 NeoBundle 'rust-lang/rust.vim'
 
+NeoBundle 'stephpy/vim-yaml'
+
 call neobundle#end()
 
 NeoBundleCheck
