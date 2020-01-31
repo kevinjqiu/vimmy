@@ -27,7 +27,8 @@ NeoBundle 'hashivim/vim-terraform'
 NeoBundle 'flazz/vim-colorschemes'
 
 " Python
-NeoBundle 'klen/python-mode'
+NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
+NeoBundle 'neoclide/coc-python'
 
 " Golang
 NeoBundle 'fatih/vim-go'
