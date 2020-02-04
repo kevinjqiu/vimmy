@@ -18,7 +18,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'Shougo/neocomplete.vim'
+"NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Konfekt/FastFold'
 
 NeoBundle 'hashivim/vim-terraform'
