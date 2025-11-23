@@ -1,49 +1,49 @@
-call neobundle#begin(expand('$HOME/.vim/bundle'))
+" Auto-install vim-plug if not present
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+call plug#begin('~/.vim/plugged')
 
-" General
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Shougo/vimproc.vim', {
-			\ 'build': {
-			\ 	'linux': 'make',
-			\ 	},
-			\ }
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-"NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Konfekt/FastFold'
+" General productivity
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Konfekt/FastFold'
+Plug 'airblade/vim-gitgutter'
+Plug 'editorconfig/editorconfig-vim'
 
-NeoBundle 'hashivim/vim-terraform'
+" Fuzzy finding - fzf (faster than CtrlP)
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
-" Color
-NeoBundle 'flazz/vim-colorschemes'
+" Snippets
+Plug 'honza/vim-snippets'
 
-" Python
-NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
-NeoBundle 'neoclide/coc-python'
+" Completion and LSP via coc.nvim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Golang
-NeoBundle 'fatih/vim-go'
+" Colorschemes
+Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sainnhe/everforest'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
-" Javascript
-NeoBundle 'pangloss/vim-javascript'
+" Language support
+Plug 'hashivim/vim-terraform'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'vim-ruby/vim-ruby'
+Plug 'rust-lang/rust.vim'
+Plug 'stephpy/vim-yaml'
+Plug 'cespare/vim-toml'
+Plug 'pearofducks/ansible-vim'
 
-" Ruby
-NeoBundle 'vim-ruby/vim-ruby'
-
-" Rust
-NeoBundle 'rust-lang/rust.vim'
-
-NeoBundle 'stephpy/vim-yaml'
-
-call neobundle#end()
-
-NeoBundleCheck
+call plug#end()

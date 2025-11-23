@@ -1,14 +1,8 @@
 " vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
 
 
-" Load neobundle and plugin config {
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-
-  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
-endif
+" Load vim-plug and plugin config {
+set nocompatible
 
 for file in split(glob("$HOME/.vim/*.vim"), '\n')
 	exec 'source' file
@@ -19,13 +13,34 @@ endfor
     syntax on
     filetype plugin indent on
 
-    set cursorline " highlight the current line
+    set cursorline              " highlight the current line
     set encoding=utf-8
     set ff=unix
     set nobackup
     set noswapfile
     set background=dark
-    set relativenumber
+    set number                  " show absolute line number on current line
+    set relativenumber          " show relative line numbers
+    set hidden                  " allow switching buffers without saving
+    set mouse=a                 " enable mouse support in all modes
+    set updatetime=300          " faster completion (default is 4000ms)
+    set timeoutlen=500          " time to wait for mapped sequence
+    set clipboard=unnamed       " use system clipboard
+    set signcolumn=yes          " always show sign column (for git/lsp)
+    set scrolloff=8             " keep 8 lines above/below cursor
+    set sidescrolloff=8         " keep 8 columns left/right of cursor
+    set completeopt=menu,menuone,noselect  " better completion experience
+    set shortmess+=c            " don't show redundant messages
+    set splitbelow              " horizontal splits go below
+    set splitright              " vertical splits go right
+    set termguicolors           " enable true color support
+
+    " Better backup/swap/undo directories if they are enabled
+    if has('persistent_undo')
+        set undofile
+        set undodir=$HOME/.vim/undo
+        silent !mkdir -p $HOME/.vim/undo
+    endif
 " }
 
 " Whitespace {
